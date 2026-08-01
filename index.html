@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Drink Ripples · דוחות אמזון</title>
+<title>Drink Ripples · סיכום שנתי אמזון US</title>
 <style>*{box-sizing:border-box}html,body{margin:0;padding:0}img{max-width:100%}</style>
 </head>
 <body>
@@ -12,13 +12,13 @@
 <div id="gate" hidden>
   <form id="gform" autocomplete="off">
     <div class="glogo">DRINK RIPPLES</div>
-    <h1>דוחות אמזון</h1>
+    <h1>דוח אמזון</h1>
     <p class="gsub">אזור מוגבל. הזינו שם משתמש וסיסמה.</p>
     <label>שם משתמש<input id="gu" type="text" autocomplete="username" required></label>
     <label>סיסמה<input id="gp" type="password" autocomplete="current-password" required></label>
     <button type="submit">כניסה</button>
     <p id="gerr" role="alert"></p>
-    <p class="gfoot">בוצע על ידי צוות איזי‑קומרס</p>
+    <p class="gfoot">הופק על ידי צוות איזי‑קומרס</p>
   </form>
 </div>
 <style>
@@ -65,67 +65,1259 @@ body.locked > .wrap{display:none}
 </script>
 
 <style>
-:root{--ground:#F2F5F5;--card:#fff;--card-2:#F8FAFA;--ink:#0E1618;--ink-2:#3E5257;--muted:#6C8287;
-  --hair:#DBE3E4;--hair-2:#EAF0F0;--accent:#0E7C86;--accent-soft:#E2F0F1;
-  --mono:ui-monospace,"Cascadia Mono","SF Mono",Consolas,monospace;
-  --sans:"Segoe UI","Arial Hebrew","Noto Sans Hebrew",Rubik,system-ui,sans-serif}
-@media (prefers-color-scheme:dark){:root{--ground:#0C1214;--card:#141C1E;--card-2:#111A1C;
-  --ink:#E9F0F1;--ink-2:#AFC3C7;--muted:#7E959A;--hair:#222E31;--hair-2:#1B2528;
-  --accent:#3FB3BE;--accent-soft:#15292C}}
-body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);direction:rtl;
-  line-height:1.65;-webkit-font-smoothing:antialiased}
-.wrap{max-width:880px;margin:0 auto;padding:70px 22px 80px}
-.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;color:var(--accent);
-  direction:ltr;text-align:right;unicode-bidi:plaintext}
-h1{font-size:clamp(30px,5vw,44px);font-weight:700;margin:14px 0 12px;letter-spacing:-.02em}
-.sub{color:var(--ink-2);font-size:17px;max-width:56ch;margin:0 0 40px}
-.cards{display:grid;gap:14px}
-a.card{display:block;text-decoration:none;background:var(--card);border:1px solid var(--hair);
-  border-radius:12px;padding:22px 24px;color:inherit;transition:border-color .15s,transform .15s;
-  box-shadow:0 1px 2px rgba(14,22,24,.05),0 10px 28px -20px rgba(14,22,24,.3)}
-a.card:hover{border-color:var(--accent);transform:translateY(-2px)}
-a.card .num{font-family:var(--mono);font-size:11.5px;color:var(--accent);letter-spacing:.14em;
-  direction:ltr;text-align:right;unicode-bidi:plaintext}
-a.card h2{font-size:21px;margin:8px 0 6px;font-weight:650}
-a.card p{margin:0;font-size:14.5px;color:var(--ink-2)}
-a.card .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-a.card .tags span{font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:999px;
-  background:var(--accent-soft);color:var(--accent);direction:ltr;unicode-bidi:plaintext}
-footer{margin-top:48px;padding-top:22px;border-top:1px solid var(--hair);color:var(--muted);font-size:13px}
-footer .byline{margin-top:14px;font-size:14px;font-weight:650;color:var(--accent)}
+:root{
+  --ground:#F2F5F5; --card:#FFFFFF; --card-2:#F8FAFA;
+  --ink:#0E1618; --ink-2:#3E5257; --muted:#6C8287; --hair:#DBE3E4; --hair-2:#EAF0F0;
+  --accent:#0E7C86; --accent-soft:#E2F0F1;
+  --pod-coffee:#A86A2E; --pod-ocean:#0E93A0; --pod-carrot:#CE2E56; --pod-cham:#8E4FB5; --pod-jungle:#5C9A32;
+  --good:#1F7A4D; --good-bg:#E4F2EA; --warn:#A8710F; --warn-bg:#FAF0DC; --crit:#A3122E; --crit-bg:#FBE6EA;
+  --shadow:0 1px 2px rgba(14,22,24,.05), 0 8px 24px -16px rgba(14,22,24,.22);
+  --sans:"Segoe UI","Arial Hebrew","Noto Sans Hebrew",Rubik,system-ui,-apple-system,sans-serif;
+  --mono:ui-monospace,"Cascadia Mono","SF Mono",Consolas,"Liberation Mono",monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --ground:#0C1214; --card:#141C1E; --card-2:#111A1C;
+    --ink:#E9F0F1; --ink-2:#AFC3C7; --muted:#7E959A; --hair:#222E31; --hair-2:#1B2528;
+    --accent:#3FB3BE; --accent-soft:#15292C;
+    --pod-coffee:#C08040; --pod-ocean:#22A5B2; --pod-carrot:#E85578; --pod-cham:#A96FD0; --pod-jungle:#63A340;
+    --good:#45B98A; --good-bg:#122720; --warn:#DDA22B; --warn-bg:#2A2110; --crit:#F26D6D; --crit-bg:#2C1418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0C1214; --card:#141C1E; --card-2:#111A1C;
+  --ink:#E9F0F1; --ink-2:#AFC3C7; --muted:#7E959A; --hair:#222E31; --hair-2:#1B2528;
+  --accent:#3FB3BE; --accent-soft:#15292C;
+  --pod-coffee:#C08040; --pod-ocean:#22A5B2; --pod-carrot:#E85578; --pod-cham:#A96FD0; --pod-jungle:#63A340;
+  --good:#45B98A; --good-bg:#122720; --warn:#DDA22B; --warn-bg:#2A2110; --crit:#F26D6D; --crit-bg:#2C1418;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+}
+:root[data-theme="light"]{
+  --ground:#F2F5F5; --card:#FFFFFF; --card-2:#F8FAFA;
+  --ink:#0E1618; --ink-2:#3E5257; --muted:#6C8287; --hair:#DBE3E4; --hair-2:#EAF0F0;
+  --accent:#0E7C86; --accent-soft:#E2F0F1;
+  --pod-coffee:#A86A2E; --pod-ocean:#0E93A0; --pod-carrot:#CE2E56; --pod-cham:#8E4FB5; --pod-jungle:#5C9A32;
+  --good:#1F7A4D; --good-bg:#E4F2EA; --warn:#A8710F; --warn-bg:#FAF0DC; --crit:#A3122E; --crit-bg:#FBE6EA;
+  --shadow:0 1px 2px rgba(14,22,24,.05), 0 8px 24px -16px rgba(14,22,24,.22);
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+     font-size:16px;line-height:1.65;direction:rtl;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px 96px}
+h1,h2,h3,h4{text-wrap:balance;margin:0;line-height:1.22;letter-spacing:-.015em}
+p{margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- masthead ---------- */
+.mast{padding:52px 0 30px;border-bottom:1px solid var(--hair)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+         color:var(--accent);direction:ltr;text-align:right;unicode-bidi:plaintext}
+.mast h1{font-size:clamp(30px,4.6vw,46px);font-weight:700;margin:14px 0 12px}
+.mast .sub{color:var(--ink-2);font-size:17.5px;max-width:62ch}
+.metaline{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{font-family:var(--mono);font-size:11.5px;padding:5px 10px;border:1px solid var(--hair);
+      border-radius:999px;color:var(--muted);background:var(--card);unicode-bidi:plaintext}
+
+/* ---------- nav ---------- */
+nav.toc{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--ground) 88%,transparent);
+        backdrop-filter:blur(10px);border-bottom:1px solid var(--hair);margin-bottom:44px}
+nav.toc ol{display:flex;gap:2px;list-style:none;margin:0;padding:9px 0;overflow-x:auto;scrollbar-width:thin}
+nav.toc a{display:block;white-space:nowrap;font-size:13.5px;padding:5px 11px;border-radius:6px;
+          color:var(--ink-2);text-decoration:none}
+nav.toc a:hover{background:var(--accent-soft);color:var(--accent)}
+nav.toc .n{font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:6px}
+
+/* ---------- sections ---------- */
+section{margin:0 0 60px;scroll-margin-top:64px}
+.shead{display:flex;align-items:baseline;gap:12px;padding-bottom:12px;
+       border-bottom:2px solid var(--ink);margin-bottom:24px}
+.shead .num{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:600}
+.shead h2{font-size:24px;font-weight:700}
+h3{font-size:18px;font-weight:650;margin:30px 0 12px}
+h4{font-size:15px;font-weight:650;margin:22px 0 8px;color:var(--ink-2)}
+.lede{font-size:17px;color:var(--ink-2);max-width:68ch;margin-bottom:22px}
+.body p+p{margin-top:12px}
+.body{max-width:70ch}
+ul.clean{margin:12px 0;padding-inline-start:20px}
+ul.clean li{margin:6px 0}
+
+/* ---------- KPI ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:12px;margin:26px 0 8px}
+.kpi{background:var(--card);border:1px solid var(--hair);border-radius:10px;padding:15px 16px;box-shadow:var(--shadow)}
+.kpi .lbl{font-size:12.5px;color:var(--muted);margin-bottom:6px}
+.kpi .val{font-family:var(--mono);font-size:25px;font-weight:600;letter-spacing:-.02em;
+          font-variant-numeric:tabular-nums;direction:ltr;text-align:right;unicode-bidi:plaintext}
+.kpi .note{font-size:12px;color:var(--muted);margin-top:5px}
+.kpi.hi{border-color:var(--accent);background:var(--accent-soft)}
+.kpi.hi .val{color:var(--accent)}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;border:1px solid var(--hair);border-radius:10px;background:var(--card);
+    box-shadow:var(--shadow);margin:18px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+thead th{position:sticky;top:0;background:var(--card-2);text-align:right;font-weight:650;font-size:12px;
+         color:var(--ink-2);padding:10px 12px;border-bottom:1px solid var(--hair);white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid var(--hair-2);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--card-2)}
+td.n,th.n{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:left;direction:ltr;
+          white-space:nowrap;unicode-bidi:plaintext}
+tr.total td{font-weight:700;background:var(--card-2);border-top:2px solid var(--hair)}
+td.name{min-width:210px;line-height:1.4}
+td.name small{display:block;color:var(--muted);font-family:var(--mono);font-size:11px;direction:ltr;
+              text-align:right;unicode-bidi:plaintext;margin-top:2px}
+
+/* ---------- bar figure ---------- */
+figure{margin:20px 0;background:var(--card);border:1px solid var(--hair);border-radius:10px;
+       padding:18px 18px 14px;box-shadow:var(--shadow)}
+figcaption{font-size:14.5px;font-weight:650;margin-bottom:3px}
+.figsub{font-size:12.5px;color:var(--muted);margin-bottom:16px}
+.bars{display:flex;flex-direction:column;gap:11px}
+.bar{display:grid;grid-template-columns:minmax(96px,168px) 1fr auto;gap:12px;align-items:center}
+.bar .bl{font-size:13px;color:var(--ink-2);line-height:1.3}
+.track{position:relative;height:16px;background:var(--hair-2);border-radius:4px;overflow:hidden}
+.fill{height:100%;border-radius:4px;background:var(--accent);transition:filter .15s}
+.bar:hover .fill{filter:brightness(1.08)}
+.bv{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;
+    direction:ltr;unicode-bidi:plaintext;min-width:74px;text-align:left;color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid var(--hair-2)}
+.legend span{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-2)}
+.swatch{width:11px;height:11px;border-radius:3px;flex:none}
+.stack{display:flex;height:22px;border-radius:4px;overflow:hidden;gap:2px;background:var(--hair-2)}
+.stack i{display:block;height:100%}
+.stack i:first-child{border-radius:0 4px 4px 0}
+.stack i:last-child{border-radius:4px 0 0 4px}
+
+/* ---------- callouts ---------- */
+.call{border:1px solid var(--hair);border-right:3px solid var(--accent);background:var(--card);
+      border-radius:8px;padding:14px 16px;margin:18px 0;box-shadow:var(--shadow)}
+.call .ct{font-size:11.5px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;
+          margin-bottom:6px;color:var(--accent);direction:ltr;text-align:right;unicode-bidi:plaintext}
+.call p{font-size:14.5px;color:var(--ink-2)}
+.call strong{color:var(--ink)}
+.call.crit{border-right-color:var(--crit);background:var(--crit-bg)}
+.call.crit .ct{color:var(--crit)}
+.call.warn{border-right-color:var(--warn);background:var(--warn-bg)}
+.call.warn .ct{color:var(--warn)}
+.call.good{border-right-color:var(--good);background:var(--good-bg)}
+.call.good .ct{color:var(--good)}
+
+.pill{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 7px;border-radius:4px;
+      white-space:nowrap;unicode-bidi:plaintext;font-weight:600}
+.pill.g{background:var(--good-bg);color:var(--good)}
+.pill.w{background:var(--warn-bg);color:var(--warn)}
+.pill.c{background:var(--crit-bg);color:var(--crit)}
+.pill.n{background:var(--hair-2);color:var(--muted)}
+.pill.new{background:var(--accent);color:var(--card)}
+
+ol.steps{margin:12px 0;padding-inline-start:22px}
+ol.steps li{margin:9px 0}
+td.w{white-space:normal;min-width:230px}
+.was{color:var(--crit);text-decoration:line-through;text-decoration-thickness:1px}
+.now{color:var(--good);font-weight:600}
+code{font-family:var(--mono);font-size:12.5px;background:var(--hair-2);padding:1px 5px;
+     border-radius:3px;direction:ltr;unicode-bidi:plaintext;display:inline-block}
+
+.engine{background:var(--card);border:1px solid var(--hair);border-radius:12px;padding:20px 22px;
+        margin:20px 0;box-shadow:var(--shadow)}
+.engine .ehead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.engine .rank{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--card);
+              background:var(--accent);border-radius:5px;padding:3px 8px;direction:ltr;unicode-bidi:plaintext}
+.engine h3{margin:0;font-size:20px}
+.engine .esize{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-inline-start:auto;
+               direction:ltr;unicode-bidi:plaintext}
+.engine .why{font-size:14.5px;color:var(--ink-2);margin:8px 0 4px}
+
+.fixbox{border:1px solid var(--hair);border-radius:10px;background:var(--card);margin:16px 0;
+        overflow:hidden;box-shadow:var(--shadow)}
+.fixbox > .fh{background:var(--card-2);padding:12px 16px;border-bottom:1px solid var(--hair);
+              display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.fixbox .fh h4{margin:0;font-size:16px;color:var(--ink)}
+.fixbox .fh .asin{font-family:var(--mono);font-size:11.5px;color:var(--muted);direction:ltr;unicode-bidi:plaintext}
+.fixbox .fh .price{font-family:var(--mono);font-size:12.5px;color:var(--accent);margin-inline-start:auto;
+                   direction:ltr;unicode-bidi:plaintext}
+.fixbox .fb{padding:14px 16px}
+.statline{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+.diag{font-size:14px;color:var(--ink-2);margin-bottom:10px}
+.fixlist{margin:0;padding-inline-start:20px;font-size:14.5px}
+.fixlist li{margin:7px 0}
+
+footer{border-top:1px solid var(--hair);padding-top:22px;color:var(--muted);font-size:13px}
+footer code{font-family:var(--mono);font-size:12px}
+footer .byline{margin-top:20px;padding-top:16px;border-top:1px solid var(--hair-2);
+  font-size:14px;font-weight:650;color:var(--accent);letter-spacing:.01em}
 </style>
+
 <div class="wrap">
-  <div class="eyebrow">Drink Ripples · Amazon US / CA / UK</div>
-  <h1>דוחות אמזון</h1>
-  <p class="sub">שלושה מסמכים: ניתוח 12 החודשים האחרונים, תוכנית הצמיחה עם אודיט הליסטינגים,
-     ותוכנית המדיה המפורטת לאוגוסט 2026.</p>
-  <div class="cards">
-    <a class="card" href="annual.html">
-      <div class="num">01 &nbsp;·&nbsp; AUG 2025 – JUL 2026</div>
-      <h2>סיכום שנתי</h2>
-      <p>$814,177 מ‑2,270 יחידות. מה הביא מכירות, אורגני מול ממומן, B2B, פרסום, החזרות ומלאי.</p>
-      <div class="tags"><span>12 פרקים</span><span>14 ASINs</span><span>72,060 sessions</span></div>
-    </a>
-    <a class="card" href="growth.html">
-      <div class="num">02 &nbsp;·&nbsp; GROWTH</div>
-      <h2>תוכנית צמיחה + אודיט ליסטינגים</h2>
-      <p>גודל השוק האמיתי לפי Search Query Performance, חמישה מנועי צמיחה מדורגים,
-         אודיט חמישה ליסטינגים ושיפוץ PPC.</p>
-      <div class="tags"><span>5 מנועים</span><span>5 ליסטינגים</span><span>90 יום</span></div>
-    </a>
-    <a class="card" href="august.html">
-      <div class="num">03 &nbsp;·&nbsp; AUGUST 2026 · Q3</div>
-      <h2>תוכנית מכירה — אוגוסט</h2>
-      <p>$6,140 מחולק ל‑19 קמפיינים. 16 קמפיינים לסגירה, 10 חדשים,
-         שינויי ביד ומיקום ברמת המטרה.</p>
-      <div class="tags"><span>$198/יום</span><span>24 מכונות</span><span>ROAS 11.38</span></div>
-    </a>
+
+<header class="mast">
+  <div class="eyebrow">Drink Ripples · Amazon.com · Aug 2025 – Jul 2026</div>
+  <h1>סיכום שנתי — מה באמת הביא מכירות</h1>
+  <p class="sub">ניתוח מלא של 12 החודשים האחרונים בחשבון האמריקאי: הכנסות, תנועה, אורגני מול ממומן,
+     B2B, החזרות, מלאי ופרסום — ואחריהם היכן נמצאת הצמיחה הבאה, אודיט חמשת הליסטינגים
+     ומפת דרכים ל‑90 יום. כל מספר בדוח הזה נגזר מהקבצים שסיפקת או מדפי המוצר החיים —
+     לא מהערכות.</p>
+  <div class="metaline">
+    <span class="chip">$814,177 מכירות</span>
+    <span class="chip">2,270 יח׳</span>
+    <span class="chip">72,060 sessions</span>
+    <span class="chip">14 ASINs פעילים</span>
+    <span class="chip">16 פרקים</span>
+    <span class="chip">ללא COGS — לפי בקשתך</span>
   </div>
-  <footer>
-    <p>הנתונים נכונים ל‑1 באוגוסט 2026. שוק amazon.com.
-       ייחוס פרסום: 7 ימים, קליק אחרון (מוכר צד ג׳).</p>
-    <p class="byline">בוצע על ידי צוות איזי‑קומרס</p>
-  </footer>
+</header>
+
+<nav class="toc" aria-label="ניווט בדוח">
+  <ol>
+    <li><a href="#s1"><span class="n">01</span>התמונה</a></li>
+    <li><a href="#s2"><span class="n">02</span>מה נמכר</a></li>
+    <li><a href="#s3"><span class="n">03</span>תנועה מול הכנסה</a></li>
+    <li><a href="#s4"><span class="n">04</span>אורגני מול ממומן</a></li>
+    <li><a href="#s5"><span class="n">05</span>B2B</a></li>
+    <li><a href="#s6"><span class="n">06</span>לקוחות חוזרים</a></li>
+    <li><a href="#s7"><span class="n">07</span>פרסום</a></li>
+    <li><a href="#s8"><span class="n">08</span>איפה הכסף דולף</a></li>
+    <li><a href="#s9"><span class="n">09</span>החזרות</a></li>
+    <li><a href="#s10"><span class="n">10</span>מלאי</a></li>
+    <li><a href="#s11"><span class="n">11</span>המגמה</a></li>
+    <li><a href="#s12"><span class="n">12</span>ביקוש אמיתי</a></li>
+    <li><a href="#s13"><span class="n">13</span>מנועי צמיחה</a></li>
+    <li><a href="#s14"><span class="n">14</span>אודיט ליסטינגים</a></li>
+    <li><a href="#s15"><span class="n">15</span>תוכנית 90 יום</a></li>
+    <li><a href="#s16"><span class="n">16</span>מקורות</a></li>
+  </ol>
+</nav>
+
+<!-- ================= 1 ================= -->
+<section id="s1">
+  <div class="shead"><span class="num">01</span><h2>התמונה הכוללת</h2></div>
+  <p class="lede">שנה של ‎$814K‎ בהכנסות מ‑2,270 יחידות. אבל מאחורי המספר הזה מסתתרים שני עסקים
+     שונים לגמרי שרצים באותו חשבון: עסק מכונות בשווי ‎$554K‎ עם 230 יחידות, ועסק מתכלים בשווי
+     ‎$260K‎ עם 2,040 יחידות.</p>
+
+  <div class="kpis">
+    <div class="kpi hi"><div class="lbl">הכנסות (12 ח׳)</div><div class="val">$814,177</div><div class="note">Ordered Product Sales</div></div>
+    <div class="kpi"><div class="lbl">יחידות</div><div class="val">2,270</div><div class="note">1,806 הזמנות</div></div>
+    <div class="kpi"><div class="lbl">ערך הזמנה ממוצע</div><div class="val">$450.82</div><div class="note">מוטה ע״י המכונות</div></div>
+    <div class="kpi"><div class="lbl">Sessions</div><div class="val">72,060</div><div class="note">91,209 צפיות דף</div></div>
+    <div class="kpi"><div class="lbl">המרה כוללת</div><div class="val">3.15%</div><div class="note">Unit Session %</div></div>
+    <div class="kpi"><div class="lbl">חלק B2B</div><div class="val">29.0%</div><div class="note">מ‑4.8% מהתנועה בלבד</div></div>
+  </div>
+
+  <div class="call good">
+    <div class="ct">The headline</div>
+    <p><strong>העסק בריא בליבה שלו.</strong> ‎96%‎ מהמכירות מגיעות מארבעה ASINs, שיעור הלקוחות
+       החוזרים עולה, ומחירי המכירה נשמרים במלואם — אין שחיקת מחיר. שלוש הבעיות אינן בביקוש:
+       דליפת תקציב פרסום, החזרות מכונות של ‎14%‎, ומלאי שנגמר בדיוק על המוצרים שנמכרים.</p>
+  </div>
+</section>
+
+<!-- ================= 2 ================= -->
+<section id="s2">
+  <div class="shead"><span class="num">02</span><h2>מה באמת נמכר</h2></div>
+
+  <figure>
+    <figcaption>תמהיל ההכנסות — 12 חודשים</figcaption>
+    <p class="figsub">מכונות מייצרות 68% מההכנסה מ‑10% מהיחידות. המתכלים הם נפח היחידות.</p>
+    <div class="bars">
+      <div class="bar"><span class="bl">מכונות (6 ASINs)</span>
+        <span class="track"><span class="fill" style="width:100%;background:var(--pod-ocean)"></span></span>
+        <span class="bv">$554,037</span></div>
+      <div class="bar"><span class="bl">פודים (7 ASINs)</span>
+        <span class="track"><span class="fill" style="width:43.2%;background:var(--pod-coffee)"></span></span>
+        <span class="bv">$239,530</span></div>
+      <div class="bar"><span class="bl">Foamer</span>
+        <span class="track"><span class="fill" style="width:3.7%;background:var(--pod-carrot)"></span></span>
+        <span class="bv">$20,610</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--pod-ocean)"></i>מכונות · 230 יח׳ · 68.0%</span>
+      <span><i class="swatch" style="background:var(--pod-coffee)"></i>פודים · 1,451 יח׳ · 29.4%</span>
+      <span><i class="swatch" style="background:var(--pod-carrot)"></i>Foamer · 589 יח׳ · 2.5%</span>
+    </div>
+  </figure>
+
+  <h3>כל ASIN, לפי הכנסה</h3>
+  <div class="tw">
+    <table>
+      <thead><tr>
+        <th>מוצר</th><th class="n">Sessions</th><th class="n">יח׳</th><th class="n">המרה</th>
+        <th class="n">מכירות</th><th class="n">מחיר</th><th class="n">B2B</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="name">Maker II — מכונה + פוד קפה<small>B0D5HWC77Q</small></td><td class="n">30,264</td><td class="n">129</td><td class="n">0.43%</td><td class="n">$283,486</td><td class="n">$2,380</td><td class="n">19%</td></tr>
+        <tr><td class="name">Maker PRO — מכונה בלבד<small>B0DLWB1L4G</small></td><td class="n">11,201</td><td class="n">88</td><td class="n">0.79%</td><td class="n">$238,711</td><td class="n">$2,997</td><td class="n">32%</td></tr>
+        <tr><td class="name">פוד קפה<small>B0DD7J3TPR</small></td><td class="n">3,025</td><td class="n">784</td><td class="n">25.9%</td><td class="n">$106,880</td><td class="n">$140</td><td class="n">36%</td></tr>
+        <tr><td class="name">פוד אדום (Black Carrot)<small>B0DD7KQD2W</small></td><td class="n">1,944</td><td class="n">198</td><td class="n">10.2%</td><td class="n">$35,210</td><td class="n">$180</td><td class="n">44%</td></tr>
+        <tr><td class="name">פוד בירה / Malt<small>B0DD7KVD78</small></td><td class="n">1,193</td><td class="n">191</td><td class="n">16.0%</td><td class="n">$33,770</td><td class="n">$180</td><td class="n">27%</td></tr>
+        <tr><td class="name">פוד Ocean Blend<small>B0DD7JCRJ8</small></td><td class="n">2,915</td><td class="n">77</td><td class="n">2.64%</td><td class="n">$21,390</td><td class="n">$280</td><td class="n">34%</td></tr>
+        <tr><td class="name">Ripples Foamer<small>B0FNW85YY4</small></td><td class="n">3,625</td><td class="n">589</td><td class="n">16.3%</td><td class="n">$20,610</td><td class="n">$34.97</td><td class="n">18%</td></tr>
+        <tr><td class="name">פוד Jungle Blend<small>B0DD7LMYNR</small></td><td class="n">765</td><td class="n">65</td><td class="n">8.50%</td><td class="n">$18,140</td><td class="n">$280</td><td class="n">45%</td></tr>
+        <tr><td class="name">פוד Chameleon<small>B0DD7JTW13 (2 רישומים)</small></td><td class="n">913</td><td class="n">136</td><td class="n">14.9%</td><td class="n">$24,140</td><td class="n">$180</td><td class="n">49%</td></tr>
+        <tr><td class="name">Maker II + Travel Case<small>B0G485MCMS</small></td><td class="n">1,426</td><td class="n">4</td><td class="n">0.28%</td><td class="n">$11,840</td><td class="n">$2,960</td><td class="n">25%</td></tr>
+        <tr><td class="name">Machine II (בלבד)<small>B0DDJ9FDTK · אזל</small></td><td class="n">8,183</td><td class="n">4</td><td class="n">0.05%</td><td class="n">$8,400</td><td class="n">$2,100</td><td class="n">25%</td></tr>
+        <tr><td class="name">מכונה + פוד בירה<small>B0CXN5S8TR · אזל</small></td><td class="n">3,866</td><td class="n">3</td><td class="n">0.08%</td><td class="n">$6,880</td><td class="n">$2,293</td><td class="n">66%</td></tr>
+        <tr><td class="name">מכונה + פוד Chameleon<small>B0D5HG5W4P</small></td><td class="n">1,171</td><td class="n">2</td><td class="n">0.17%</td><td class="n">$4,720</td><td class="n">$2,360</td><td class="n">50%</td></tr>
+        <tr><td class="name">מכונה + פוד אדום<small>B0D233RPN6 · אפס מכירות</small></td><td class="n">1,423</td><td class="n">0</td><td class="n">0.00%</td><td class="n">$0</td><td class="n">—</td><td class="n">—</td></tr>
+        <tr><td class="name">מכונה + פוד קפה (כפילות)<small>B0D8SKRRXJ · אפס מכירות</small></td><td class="n">140</td><td class="n">0</td><td class="n">0.00%</td><td class="n">$0</td><td class="n">—</td><td class="n">—</td></tr>
+        <tr class="total"><td>סה״כ</td><td class="n">72,060</td><td class="n">2,270</td><td class="n">3.15%</td><td class="n">$814,177</td><td class="n">—</td><td class="n">29.0%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="body">
+    <p>שלוש שורות בטבלה הזאת ראויות לתשומת לב מיוחדת:</p>
+    <ul class="clean">
+      <li><strong>פוד הקפה ממיר ב‑25.9%.</strong> זהו שיעור המרה יוצא דופן בכל קטגוריה באמזון,
+          והוא מוכיח שהבסיס המותקן קונה חוזר. זהו נכס העסק החזק ביותר.</li>
+      <li><strong>Ocean Blend ממיר ב‑2.64% בלבד</strong> — פי 6 פחות מפוד הקפה — למרות שהוא
+          מקבל את התנועה השלישית בגודלה בין הפודים (2,915 sessions). הסיבה מבנית: Ocean ו‑Jungle
+          תואמים <em>רק ל‑PRO</em>, אבל הם יושבים באותו עץ וריאציות עם מכונת Maker II.
+          רוב המבקרים הם בעלי Maker II, ולכן הם לא יכולים לקנות.</li>
+      <li><strong>Maker II ממיר ב‑0.43%.</strong> זה נמוך גם למוצר ב‑$2,380, ומכאן מגיעה
+          עיקר ההזדמנות: שיפור של עשירית האחוז בלבד שווה כאן כ‑$72,000 בשנה.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 3 ================= -->
+<section id="s3">
+  <div class="shead"><span class="num">03</span><h2>תנועה מול הכנסה — הפער הכי יקר בחשבון</h2></div>
+  <p class="lede">‎22.5%‎ מכל התנועה השנתית נחתה על שישה ASINs שמכרו 13 יחידות בסך הכל.</p>
+
+  <figure>
+    <figcaption>לאן הלכה התנועה, ומאיפה הגיעה ההכנסה</figcaption>
+    <p class="figsub">אחוז מתוך 72,060 sessions מול אחוז מתוך $814,177. שתי סדרות — ראה מקרא.</p>
+    <div class="bars">
+      <div class="bar"><span class="bl">Maker II (הגיבור)</span>
+        <span class="track"><span class="fill" style="width:42.0%;background:var(--pod-ocean)"></span></span>
+        <span class="bv">42.0% תנועה</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:34.8%;background:var(--pod-carrot)"></span></span>
+        <span class="bv">34.8% הכנסה</span></div>
+      <div class="bar"><span class="bl">Maker PRO</span>
+        <span class="track"><span class="fill" style="width:15.5%;background:var(--pod-ocean)"></span></span>
+        <span class="bv">15.5% תנועה</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:29.3%;background:var(--pod-carrot)"></span></span>
+        <span class="bv">29.3% הכנסה</span></div>
+      <div class="bar"><span class="bl">כל הפודים + Foamer</span>
+        <span class="track"><span class="fill" style="width:20.0%;background:var(--pod-ocean)"></span></span>
+        <span class="bv">20.0% תנועה</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:32.0%;background:var(--pod-carrot)"></span></span>
+        <span class="bv">32.0% הכנסה</span></div>
+      <div class="bar"><span class="bl">6 ה‑ASINs המתים</span>
+        <span class="track"><span class="fill" style="width:22.5%;background:var(--pod-ocean)"></span></span>
+        <span class="bv">22.5% תנועה</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:3.9%;background:var(--pod-carrot)"></span></span>
+        <span class="bv">3.9% הכנסה</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--pod-ocean)"></i>נתח מהתנועה</span>
+      <span><i class="swatch" style="background:var(--pod-carrot)"></i>נתח מההכנסה</span>
+    </div>
+  </figure>
+
+  <div class="call crit">
+    <div class="ct">Critical</div>
+    <p><strong>16,209 sessions — כמעט רבע מהתנועה השנתית — הלכו לשישה רישומים שמכרו 13 יחידות
+       ($31,840).</strong> חמישה מהם מסומנים <code>out_of_stock</code> בדוח החידוש, ואחד
+       (B0D233RPN6, "מכונה + פוד אדום") לא מכר ולו יחידה אחת בשנה שלמה למרות 1,423 sessions.
+       זו לא בעיית ביקוש — זו בעיית קטלוג. כל session שנוחת על ילד שאזל הוא ביקוש שכבר שילמת
+       עליו וזרקת.</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>ASIN</th><th>מצב</th><th class="n">Sessions</th><th class="n">יח׳</th><th class="n">Buy Box</th><th class="n">מכירות</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Machine II<small>B0DDJ9FDTK</small></td><td><span class="pill c">אזל</span></td><td class="n">8,183</td><td class="n">4</td><td class="n">92.5%</td><td class="n">$8,400</td></tr>
+        <tr><td class="name">מכונה + פוד בירה<small>B0CXN5S8TR</small></td><td><span class="pill c">אזל</span></td><td class="n">3,866</td><td class="n">3</td><td class="n">76.1%</td><td class="n">$6,880</td></tr>
+        <tr><td class="name">Maker II + Travel Case<small>B0G485MCMS</small></td><td><span class="pill w">FBM · CX חלש</span></td><td class="n">1,426</td><td class="n">4</td><td class="n">99.0%</td><td class="n">$11,840</td></tr>
+        <tr><td class="name">מכונה + פוד אדום<small>B0D233RPN6</small></td><td><span class="pill c">אזל · 0 מכירות</span></td><td class="n">1,423</td><td class="n">0</td><td class="n">84.5%</td><td class="n">$0</td></tr>
+        <tr><td class="name">מכונה + פוד Chameleon<small>B0D5HG5W4P</small></td><td><span class="pill w">FBM</span></td><td class="n">1,171</td><td class="n">2</td><td class="n">86.9%</td><td class="n">$4,720</td></tr>
+        <tr><td class="name">מכונה + פוד קפה (כפילות)<small>B0D8SKRRXJ</small></td><td><span class="pill c">אזל · 0 מכירות</span></td><td class="n">140</td><td class="n">0</td><td class="n">88.1%</td><td class="n">$0</td></tr>
+        <tr class="total"><td>סה״כ</td><td></td><td class="n">16,209</td><td class="n">13</td><td class="n">—</td><td class="n">$31,840</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="body">
+    <p>שים לב גם ל‑Buy Box: על B0CXN5S8TR החזקתם את ה‑Featured Offer רק ב‑76% מהזמן,
+       ועל B0D233RPN6 ב‑84.5%. כשה‑Buy Box אובד, המודעות מפסיקות להיות מוצגות לחלוטין —
+       כלומר גם התקציב הפרסומי על אותם ASINs נחסם מלכתחילה.</p>
+  </div>
+</section>
+
+<!-- ================= 4 ================= -->
+<section id="s4">
+  <div class="shead"><span class="num">04</span><h2>אורגני מול ממומן</h2></div>
+  <p class="lede">אמזון לא מפרסמת פילוח אורגני/ממומן ישירות, אבל אפשר לחשב אותו: מכירות מיוחסות‑פרסום
+     מול סך המכירות באותה תקופה.</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="lbl">מכירות מיוחסות פרסום (90 ימים)</div><div class="val">$71,392</div><div class="note">SP, ייחוס 7 ימים</div></div>
+    <div class="kpi"><div class="lbl">סך מכירות (Q, מהסליקה)</div><div class="val">$194,256</div><div class="note">1 במאי – 30 ביולי 2026</div></div>
+    <div class="kpi hi"><div class="lbl">חלק אורגני משוער</div><div class="val">63%</div><div class="note">$122,864</div></div>
+    <div class="kpi"><div class="lbl">TACOS</div><div class="val">9.2%</div><div class="note">$17,957 פרסום</div></div>
+  </div>
+
+  <div class="call good">
+    <div class="ct">בריא</div>
+    <p><strong>‎63%‎ מההכנסה אורגנית, TACOS של ‎9.2%‎.</strong> לפי מדדי הבשלות המקובלים
+       (‎50–70%‎ אורגני, TACOS ‎5–15%‎ למותג בוגר) — אתם בטווח התקין. אתם לא "שוכרים" את ההכנסה.</p>
+  </div>
+
+  <div class="call warn">
+    <div class="ct">אבל — הסייג החשוב</div>
+    <p><strong>מתוך המכירות המיוחסות לפרסום, ‎83%‎ מגיעות ממילות מפתח של שם המותג.</strong>
+       חיפוש על "ripples coffee printer" הוא לקוח שכבר מכיר אתכם. השאלה הכנה היא
+       "האם המכירה הזו הייתה קורית גם בלי המודעה?" — ועל מונחי מותג התשובה היא לרוב כן.
+       כלומר, ה‑TACOS הנמוך הוא במידה רבה תוצאה של מיקוד במותג, לא של יעילות רכישה.</p>
+  </div>
+
+  <figure>
+    <figcaption>ACOS לפי סוג מונח — כל הפרסום מאז יוני 2024</figcaption>
+    <p class="figsub">מונחי מותג מול מונחי קטגוריה. שתי סדרות — ראה מקרא.</p>
+    <div class="bars">
+      <div class="bar"><span class="bl">מונחי מותג (ripples/ripple maker)</span>
+        <span class="track"><span class="fill" style="width:45.9%;background:var(--pod-ocean)"></span></span>
+        <span class="bv">$51,253 הוצאה</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:82.9%;background:var(--pod-carrot)"></span></span>
+        <span class="bv">$433,354 מכירות</span></div>
+      <div class="bar"><span class="bl">מונחי קטגוריה / תחרות</span>
+        <span class="track"><span class="fill" style="width:54.1%;background:var(--pod-ocean)"></span></span>
+        <span class="bv">$60,407 הוצאה</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:17.1%;background:var(--pod-carrot)"></span></span>
+        <span class="bv">$89,571 מכירות</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--pod-ocean)"></i>נתח מהוצאת הפרסום</span>
+      <span><i class="swatch" style="background:var(--pod-carrot)"></i>נתח ממכירות הפרסום</span>
+    </div>
+  </figure>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>פילוח</th><th class="n">הוצאה</th><th class="n">מכירות</th><th class="n">ACOS</th><th class="n">ROAS</th></tr></thead>
+      <tbody>
+        <tr><td>מונחי מותג</td><td class="n">$51,253</td><td class="n">$433,354</td><td class="n">11.8%</td><td class="n">8.5</td></tr>
+        <tr><td>מונחי קטגוריה, ASIN ותחרות</td><td class="n">$60,407</td><td class="n">$89,571</td><td class="n">67.4%</td><td class="n">1.5</td></tr>
+        <tr class="total"><td>סה״כ Sponsored Products (מצטבר)</td><td class="n">$111,660</td><td class="n">$522,925</td><td class="n">21.4%</td><td class="n">4.7</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= 5 ================= -->
+<section id="s5">
+  <div class="shead"><span class="num">05</span><h2>B2B — הערוץ שאף אחד לא מנהל</h2></div>
+  <p class="lede">קוני Amazon Business הם ‎4.8%‎ מהתנועה ו‑‎29.0%‎ מההכנסה. הם ממירים פי 3 עד פי 14
+     מקונים פרטיים על אותו דף מוצר בדיוק.</p>
+
+  <div class="kpis">
+    <div class="kpi hi"><div class="lbl">הכנסות B2B</div><div class="val">$235,749</div><div class="note">29.0% מהמכירות</div></div>
+    <div class="kpi"><div class="lbl">Sessions B2B</div><div class="val">3,434</div><div class="note">4.8% מהתנועה</div></div>
+    <div class="kpi"><div class="lbl">יחידות B2B</div><div class="val">702</div><div class="note">30.9% מהיחידות</div></div>
+    <div class="kpi"><div class="lbl">המרת B2B, פוד קפה</div><div class="val">72.8%</div><div class="note">מול 25.9% כללי</div></div>
+  </div>
+
+  <figure>
+    <figcaption>שיעור המרה: קונה עסקי מול קונה פרטי</figcaption>
+    <p class="figsub">Unit Session % על אותו ASIN. שתי סדרות — ראה מקרא.</p>
+    <div class="bars">
+      <div class="bar"><span class="bl">פוד קפה</span>
+        <span class="track"><span class="fill" style="width:100%;background:var(--pod-cham)"></span></span>
+        <span class="bv">72.8% B2B</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:35.6%;background:var(--muted)"></span></span>
+        <span class="bv">25.9% כללי</span></div>
+      <div class="bar"><span class="bl">פוד אדום</span>
+        <span class="track"><span class="fill" style="width:80.0%;background:var(--pod-cham)"></span></span>
+        <span class="bv">58.3% B2B</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:14.0%;background:var(--muted)"></span></span>
+        <span class="bv">10.2% כללי</span></div>
+      <div class="bar"><span class="bl">Foamer</span>
+        <span class="track"><span class="fill" style="width:73.2%;background:var(--pod-cham)"></span></span>
+        <span class="bv">53.3% B2B</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:22.3%;background:var(--muted)"></span></span>
+        <span class="bv">16.3% כללי</span></div>
+      <div class="bar"><span class="bl">Ocean Blend</span>
+        <span class="track"><span class="fill" style="width:28.3%;background:var(--pod-cham)"></span></span>
+        <span class="bv">20.6% B2B</span></div>
+      <div class="bar"><span class="bl"></span>
+        <span class="track"><span class="fill" style="width:3.6%;background:var(--muted)"></span></span>
+        <span class="bv">2.6% כללי</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--pod-cham)"></i>קונים עסקיים (Amazon Business)</span>
+      <span><i class="swatch" style="background:var(--muted)"></i>כלל הקונים</span>
+    </div>
+  </figure>
+
+  <div class="body">
+    <p>זה הגיוני לחלוטין: מכונת הדפסה על משקאות ב‑$2,380 היא ציוד מסחרי. הקונה האמיתי הוא
+       בית קפה, בר, מלון, חברת קייטרינג או מפיק אירועים. שני ASINs מכרו יותר מ‑50% מהכנסתם
+       ל‑B2B — B0CXN5S8TR (‎66%‎) ו‑B0D5HG5W4P (‎50%‎).</p>
+    <p>ובכל זאת: אין ולו קמפיין אחד, כותרת אחת או תמונה אחת בחשבון שמדברת אל הקונה העסקי.
+       כל הליסטינגים כתובים בשפה של צרכן פרטי.</p>
+  </div>
+</section>
+
+<!-- ================= 6 ================= -->
+<section id="s6">
+  <div class="shead"><span class="num">06</span><h2>לקוחות חוזרים — הבסיס המותקן</h2></div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>רבעון</th><th class="n">הזמנות</th><th class="n">לקוחות ייחודיים</th><th class="n">מכירות חוזרות</th><th class="n">% מהמכירות</th><th class="n">% מהיחידות</th><th class="n">% מהלקוחות</th></tr></thead>
+      <tbody>
+        <tr><td>Q3 2025</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+        <tr><td>Q4 2025</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+        <tr><td>Q1 2026</td><td class="n">422</td><td class="n">321</td><td class="n">$33,090</td><td class="n">20.3%</td><td class="n">30.4%</td><td class="n">20.9%</td></tr>
+        <tr><td>Q2 2026</td><td class="n">443</td><td class="n">315</td><td class="n">$55,134</td><td class="n">23.2%</td><td class="n">30.7%</td><td class="n">24.1%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="call good">
+    <div class="ct">מגמה חיובית</div>
+    <p>נתח הלקוחות החוזרים עלה מ‑‎20.9%‎ ל‑‎24.1%‎ ברבעון (‎+3.25‎ נק׳ אחוז), ומכירות חוזרות
+       זינקו ב‑‎67%‎. <strong>כל מכונה שנמכרת יוצרת זרם הכנסות חוזר.</strong>
+       ניתוח סל הקניות מאשר: קוני Maker II רוכשים באותו סל פוד קפה (‎30%‎) ופוד Ocean (‎20%‎);
+       קוני PRO רוכשים פוד קפה (‎37.5%‎) ו‑Jungle (‎37.5%‎).</p>
+  </div>
+
+  <div class="body">
+    <p>יחס ההצמדה: 230 מכונות נמכרו השנה, מולן 1,451 יחידות פוד — כ‑6.3 פודים לכל מכונה שנמכרה.
+       מכיוון שרוב הפודים נקנים על ידי הבסיס המותקן הישן ולא על ידי הרוכשים החדשים, המספר הזה
+       הוא הערכת חסר לערך החיים האמיתי של לקוח מכונה.</p>
+  </div>
+</section>
+
+<!-- ================= 7 ================= -->
+<section id="s7">
+  <div class="shead"><span class="num">07</span><h2>פרסום — כל התמונה</h2></div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="lbl">הוצאת SP (90 ימים)</div><div class="val">$14,747</div><div class="note">1.5–30.7.2026</div></div>
+    <div class="kpi"><div class="lbl">מכירות SP</div><div class="val">$71,392</div><div class="note">ACOS 20.7%</div></div>
+    <div class="kpi"><div class="lbl">הוצאת SB Video</div><div class="val">$3,210</div><div class="note">1,879 קליקים</div></div>
+    <div class="kpi crit"><div class="lbl">מכירות SB</div><div class="val">~$0</div><div class="note">אפס אפקטיבי</div></div>
+    <div class="kpi"><div class="lbl">CPC ממוצע</div><div class="val">$2.96</div><div class="note">מונחי מותג: $6.54</div></div>
+    <div class="kpi"><div class="lbl">קמפיינים פעילים</div><div class="val">28</div><div class="note">מתוך 108 שנוצרו אי‑פעם</div></div>
+  </div>
+
+  <h3>הפילוח שמסביר הכל: מיקום המודעה</h3>
+  <p class="lede">‎73%‎ מתקציב הפרסום הלך למיקומים שהניבו ‎21%‎ מהמכירות.</p>
+
+  <figure>
+    <figcaption>יעילות לפי מיקום מודעה — 90 ימים</figcaption>
+    <p class="figsub">אורך העמודה = הוצאה. הערך = מכירות שהתקבלו. סדרה אחת (הוצאה), עם ערכי מכירות בתווית.</p>
+    <div class="bars">
+      <div class="bar"><span class="bl">Top of Search<br><small style="color:var(--muted)">ACOS 7.1%</small></span>
+        <span class="track"><span class="fill" style="width:53.2%;background:var(--good)"></span></span>
+        <span class="bv">$3,842 → $54,013</span></div>
+      <div class="bar"><span class="bl">Product pages<br><small style="color:var(--muted)">ACOS 53.1%</small></span>
+        <span class="track"><span class="fill" style="width:100%;background:var(--warn)"></span></span>
+        <span class="bv">$7,223 → $13,609</span></div>
+      <div class="bar"><span class="bl">Rest of search<br><small style="color:var(--muted)">ACOS 161%</small></span>
+        <span class="track"><span class="fill" style="width:21.8%;background:var(--crit)"></span></span>
+        <span class="bv">$1,576 → $980</span></div>
+      <div class="bar"><span class="bl">Off Amazon<br><small style="color:var(--muted)">ACOS ∞</small></span>
+        <span class="track"><span class="fill" style="width:26.0%;background:var(--crit)"></span></span>
+        <span class="bv">$1,878 → $0</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--good)"></i>מתחת ליעד</span>
+      <span><i class="swatch" style="background:var(--warn)"></i>גבולי</span>
+      <span><i class="swatch" style="background:var(--crit)"></i>הפסד</span>
+    </div>
+  </figure>
+
+  <div class="call crit">
+    <div class="ct">הממצא הכי חד בדוח</div>
+    <p><strong>מיקום "Off Amazon" צרך ‎1,470‎ קליקים ו‑$1,878 ב‑90 יום והניב אפס הזמנות. אפס.</strong>
+       בנוסף, על הקמפיין <code>EZ | Manual KW - ripples</code> ה‑CPC בעמודי מוצר היה
+       <strong>$25.68</strong> לעומת <strong>$1.66</strong> ב‑Top of Search — פי 15 יותר יקר,
+       על אותה מילת מפתח בדיוק. אותו קמפיין הרוויח $10,740 מ‑$162 ב‑Top of Search,
+       ו‑$10,334 מ‑$3,980 בעמודי מוצר.</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>מיקום</th><th class="n">קליקים</th><th class="n">הוצאה</th><th class="n">% מההוצאה</th><th class="n">מכירות</th><th class="n">% מהמכירות</th><th class="n">ACOS</th></tr></thead>
+      <tbody>
+        <tr><td>Top of Search</td><td class="n">1,357</td><td class="n">$3,842</td><td class="n">26.5%</td><td class="n">$54,013</td><td class="n">78.7%</td><td class="n"><span class="pill g">7.1%</span></td></tr>
+        <tr><td>Product pages</td><td class="n">~900</td><td class="n">$7,223</td><td class="n">49.7%</td><td class="n">$13,609</td><td class="n">19.8%</td><td class="n"><span class="pill w">53.1%</span></td></tr>
+        <tr><td>Rest of search</td><td class="n">~290</td><td class="n">$1,576</td><td class="n">10.9%</td><td class="n">$980</td><td class="n">1.4%</td><td class="n"><span class="pill c">161%</span></td></tr>
+        <tr><td>Off Amazon</td><td class="n">1,470</td><td class="n">$1,878</td><td class="n">12.9%</td><td class="n">$0</td><td class="n">0.0%</td><td class="n"><span class="pill c">∞</span></td></tr>
+        <tr class="total"><td>סה״כ</td><td class="n">~4,017</td><td class="n">$14,519</td><td class="n">100%</td><td class="n">$68,602</td><td class="n">100%</td><td class="n">21.2%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Sponsored Brands Video — $3,210 ללא תמורה</h3>
+  <div class="call crit">
+    <div class="ct">Critical</div>
+    <p>22 קמפייני SB Video רצו בין מאי ליולי 2026: ‎210,392‎ הופעות, ‎1,879‎ קליקים, ‎$3,210‎ —
+       ומכירות אפסיות. <strong>‎$1,729‎ מזה (54% מהתקציב) הלכו למונח יחיד: "coffee maker",
+       873 קליקים, אפס הזמנות.</strong> "coffee maker" הוא מונח בהיקף ‎4.6‎ מיליון חיפושים ברבעון
+       שבו מחיר הרכישה החציוני הוא ‎$34.99‎. אתם מוכרים ב‑$2,380. אין שום סיכוי שזה יומר.</p>
+  </div>
+
+  <h3>עשרת המונחים שהביאו את הכסף</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>מונח חיפוש</th><th class="n">קליקים</th><th class="n">הוצאה</th><th class="n">מכירות</th><th class="n">ACOS</th></tr></thead>
+      <tbody>
+        <tr><td class="n">ripples coffee printer</td><td class="n">305</td><td class="n">$2,605</td><td class="n">$13,700</td><td class="n"><span class="pill g">19%</span></td></tr>
+        <tr><td class="n">ripple maker</td><td class="n">114</td><td class="n">$903</td><td class="n">$9,457</td><td class="n"><span class="pill g">10%</span></td></tr>
+        <tr><td class="n">ripple latte art printer</td><td class="n">13</td><td class="n">$10</td><td class="n">$4,760</td><td class="n"><span class="pill g">0.2%</span></td></tr>
+        <tr><td class="n">ripple pods</td><td class="n">5</td><td class="n">$39</td><td class="n">$3,737</td><td class="n"><span class="pill g">1%</span></td></tr>
+        <tr><td class="n">latte art printer</td><td class="n">58</td><td class="n">$73</td><td class="n">$3,000</td><td class="n"><span class="pill g">2%</span></td></tr>
+        <tr><td class="n">ripple machine</td><td class="n">44</td><td class="n">$108</td><td class="n">$2,380</td><td class="n"><span class="pill g">5%</span></td></tr>
+        <tr><td class="n">ripples maker</td><td class="n">4</td><td class="n">$2</td><td class="n">$2,380</td><td class="n"><span class="pill g">0.1%</span></td></tr>
+        <tr><td class="n">ripples printer</td><td class="n">5</td><td class="n">$4</td><td class="n">$2,380</td><td class="n"><span class="pill g">0.2%</span></td></tr>
+        <tr><td class="n">ripple foamer</td><td class="n">6</td><td class="n">$7</td><td class="n">$2,005</td><td class="n"><span class="pill g">0.4%</span></td></tr>
+        <tr><td class="n">easy foam cocktail foamer</td><td class="n">33</td><td class="n">$75</td><td class="n">$315</td><td class="n"><span class="pill g">24%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="body" style="margin-top:10px">תשעה מתוך עשרה הם מונחי מותג. המונח הלא‑מותגי היחיד
+     שהביא מכירת מכונה הוא <span class="pill n">latte art printer</span> — 58 קליקים,
+     $73, $3,000 — ACOS של 2%. זהו המונח הלא‑מותגי היחיד שהוכיח את עצמו, והוא ראוי
+     להצעת מחיר גבוהה יותר ולקמפיין משלו.</p>
+</section>
+
+<!-- ================= 8 ================= -->
+<section id="s8">
+  <div class="shead"><span class="num">08</span><h2>איפה הכסף דלף — 90 יום, מונח‑מונח</h2></div>
+  <p class="lede">מתוך 651 מונחי חיפוש שנרכשו ב‑90 הימים האחרונים, ‎586‎ לא הביאו ולו מכירה אחת —
+     2,507 קליקים ו‑$5,444.</p>
+
+  <h3>מונחי הקטגוריה שלא ממירים</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>מונח</th><th class="n">הופעות</th><th class="n">קליקים</th><th class="n">הוצאה</th><th class="n">מכירות</th></tr></thead>
+      <tbody>
+        <tr><td class="n">coffee printer</td><td class="n">9,395</td><td class="n">622</td><td class="n">$666</td><td class="n"><span class="pill c">$0</span></td></tr>
+        <tr><td class="n">edible printer</td><td class="n">29,206</td><td class="n">293</td><td class="n">$301</td><td class="n"><span class="pill c">$0</span></td></tr>
+        <tr><td class="n">ripples machine</td><td class="n">1,002</td><td class="n">58</td><td class="n">$423</td><td class="n"><span class="pill c">$0</span></td></tr>
+        <tr><td class="n">ripples drink printer</td><td class="n">2,191</td><td class="n">38</td><td class="n">$195</td><td class="n"><span class="pill c">$0</span></td></tr>
+        <tr><td class="n">ripple barista</td><td class="n">58</td><td class="n">4</td><td class="n">$133</td><td class="n"><span class="pill c">$0</span> · CPC $33.20</td></tr>
+        <tr><td class="n">latte printer</td><td class="n">3,502</td><td class="n">49</td><td class="n">$78</td><td class="n"><span class="pill c">$0</span></td></tr>
+        <tr><td class="n">coffee printer machine</td><td class="n">1,053</td><td class="n">45</td><td class="n">$74</td><td class="n"><span class="pill c">$0</span></td></tr>
+        <tr><td class="n">latte art</td><td class="n">274</td><td class="n">16</td><td class="n">$94</td><td class="n"><span class="pill c">$0</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="body">
+    <p><strong>"coffee printer" קיבל 622 קליקים ב‑90 יום ולא הביא ולו מכירה אחת.</strong>
+       זה המונח המרכזי בקטגוריה. העובדה שהוא לא ממיר גם כשקונים עליו את המיקום אומרת
+       שהבעיה אינה דירוג — היא בכך שהתנועה שהמונח מביא אינה תנועה של קונה מכונה ב‑$2,380.</p>
+  </div>
+
+</section>
+
+<!-- ================= 9 ================= -->
+<section id="s9">
+  <div class="shead"><span class="num">09</span><h2>החזרות — 14.5% מההכנסה</h2></div>
+  <p class="lede">נתוני הסליקה למאי–יולי 2026 מראים ‎$28,080‎ החזרים מול ‎$194,256‎ מכירות ברוטו.
+     זהו הפער הגדול ביותר בין "מכירות" ל"כסף בבנק".</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="lbl">מכירות ברוטו (רבעון)</div><div class="val">$194,256</div><div class="note">596 יח׳</div></div>
+    <div class="kpi crit"><div class="lbl">החזרים</div><div class="val">−$28,080</div><div class="note">38 יח׳ · 14.5%</div></div>
+    <div class="kpi"><div class="lbl">עמלות אמזון</div><div class="val">−$34,975</div><div class="note">מכירה + FBA + אחסון</div></div>
+    <div class="kpi hi"><div class="lbl">נטו לפני COGS ופרסום</div><div class="val">$134,011</div><div class="note">69.0% מהברוטו</div></div>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>מוצר</th><th class="n">נמכר (יח׳)</th><th class="n">הוחזר</th><th class="n">% יח׳</th><th class="n">$ שהוחזרו</th><th>סיבה מובילה</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Maker II + פוד קפה<small>ASY00100_Coffee Pod</small></td><td class="n">31</td><td class="n">6</td><td class="n"><span class="pill c">19.4%</span></td><td class="n">$11,490</td><td>Unwanted / Not as described</td></tr>
+        <tr><td class="name">Maker II + Travel Case<small>RM + Travel Case</small></td><td class="n">4</td><td class="n">1</td><td class="n"><span class="pill c">25.0%</span></td><td class="n">$2,521</td><td>Damaged item</td></tr>
+        <tr><td class="name">פוד בירה / Malt<small>Beer Pod</small></td><td class="n">50</td><td class="n">10</td><td class="n"><span class="pill c">20.0%</span></td><td class="n">$1,733</td><td>Defective · הזמנה שגויה</td></tr>
+        <tr><td class="name">Jungle Blend<small>Jungle Blend Pod</small></td><td class="n">16</td><td class="n">3</td><td class="n"><span class="pill w">18.8%</span></td><td class="n">$729</td><td>לא תואם למכונה</td></tr>
+        <tr><td class="name">Maker PRO<small>Machine PRO New</small></td><td class="n">15</td><td class="n">2</td><td class="n"><span class="pill w">13.3%</span></td><td class="n">$4,855</td><td>Not as described</td></tr>
+        <tr><td class="name">Ocean Blend<small>Ocean Blend Pod</small></td><td class="n">10</td><td class="n">1</td><td class="n"><span class="pill w">10.0%</span></td><td class="n">$243</td><td>צבע שגוי</td></tr>
+        <tr><td class="name">פוד אדום<small>Red Pod</small></td><td class="n">73</td><td class="n">4</td><td class="n"><span class="pill n">5.5%</span></td><td class="n">$632</td><td>Defective</td></tr>
+        <tr><td class="name">Chameleon<small>Chameleon pod</small></td><td class="n">28</td><td class="n">1</td><td class="n"><span class="pill n">3.6%</span></td><td class="n">$158</td><td>—</td></tr>
+        <tr><td class="name">פוד קפה<small>Coffee Pod</small></td><td class="n">155</td><td class="n">5</td><td class="n"><span class="pill n">3.2%</span></td><td class="n">$616</td><td>—</td></tr>
+        <tr><td class="name">Foamer<small>Foamer</small></td><td class="n">214</td><td class="n">4</td><td class="n"><span class="pill g">1.9%</span></td><td class="n">$123</td><td>—</td></tr>
+        <tr class="total"><td>סה״כ</td><td class="n">596</td><td class="n">38</td><td class="n">6.4%</td><td class="n">$28,080</td><td>14.5% מהערך</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>מה הלקוחות כתבו</h3>
+  <div class="body">
+    <p>קריאה של 102 רשומות ההחזרה השנתיות מגלה שלושה דפוסים חוזרים, וכולם ניתנים לתיקון בליסטינג:</p>
+    <ul class="clean">
+      <li><strong>בלבול בין פודים.</strong> <em>"Needed the coffee pod, not the malt pod"</em> ·
+          <em>"I ended up needed the beer pods and not the coffee pod"</em> ·
+          <em>"Color diferente al necesitado"</em>. הפוד נקרא "Beer Pod" בכותרת אבל
+          <strong>"Malt Pod"</strong> בנקודה 5 של אותו ליסטינג עצמו. שם אחד למוצר אחד.</li>
+      <li><strong>אי‑תאימות.</strong> החזרות עם הסיבה <code>NOT_COMPATIBLE</code> על פוד קפה
+          ועל ה‑PRO. Ocean ו‑Jungle תואמים ל‑PRO בלבד — וזה מופיע רק בסוף נקודה 2, בסוגריים.</li>
+      <li><strong>אירועים שהוחמצו.</strong> <em>"did not arrive in time for the event"</em> —
+          לקוח אחד החזיר הזמנה שלמה של ארבעה פודים מסיבה זו. קונה האירועים הוא לקוח דחוף;
+          מלאי חסר עולה לכם בהזמנה שלמה, לא בפריט.</li>
+    </ul>
+  </div>
+
+  <div class="call warn">
+    <div class="ct">בריאות CX לפי אמזון</div>
+    <p>שני ASINs מסומנים <span class="pill c">Very poor</span> בדוח ה‑Voice of the Customer:
+       <strong>Ocean Blend Pod</strong> (NCX 16.67%, סיבה: "Performance or quality not adequate")
+       ו‑<strong>Maker II + Travel Case</strong> (NCX 50%, סיבה: "Damaged item").
+       דירוג CX ירוד פוגע בזכאות למודעות ובחשיפה האורגנית.</p>
+  </div>
+</section>
+
+<!-- ================= 10 ================= -->
+<section id="s10">
+  <div class="shead"><span class="num">10</span><h2>מלאי — נגמר בדיוק על מה שנמכר</h2></div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>מוצר</th><th class="n">זמין למכירה</th><th class="n">סה״כ במלאי</th><th class="n">ימי כיסוי</th><th class="n">נמכר ב‑30 יום</th><th>סטטוס</th></tr></thead>
+      <tbody>
+        <tr><td class="name">פוד קפה<small>B0DD7J3TPR</small></td><td class="n">0</td><td class="n">108</td><td class="n">66</td><td class="n">46</td><td><span class="pill c">0 זמין · 25 בקליטה</span></td></tr>
+        <tr><td class="name">Jungle Blend<small>B0DD7LMYNR</small></td><td class="n">0</td><td class="n">11</td><td class="n">39</td><td class="n">8</td><td><span class="pill c">0 זמין · 10 בדרך</span></td></tr>
+        <tr><td class="name">Ocean Blend<small>B0DD7JCRJ8</small></td><td class="n">2</td><td class="n">14</td><td class="n">69</td><td class="n">5</td><td><span class="pill w">נמוך</span></td></tr>
+        <tr><td class="name">פוד אדום<small>B0DD7KQD2W</small></td><td class="n">8</td><td class="n">28</td><td class="n">25</td><td class="n">30</td><td><span class="pill w">הכי דחוף</span></td></tr>
+        <tr><td class="name">פוד בירה<small>B0DD7KVD78</small></td><td class="n">32</td><td class="n">33</td><td class="n">49</td><td class="n">13</td><td><span class="pill g">תקין</span></td></tr>
+        <tr><td class="name">Chameleon<small>B0DD7JTW13</small></td><td class="n">14</td><td class="n">17</td><td class="n">53</td><td class="n">8</td><td><span class="pill g">תקין</span></td></tr>
+        <tr><td class="name">Foamer<small>B0FNW85YY4</small></td><td class="n">124</td><td class="n">178</td><td class="n">64</td><td class="n">84</td><td><span class="pill g">תקין</span></td></tr>
+        <tr><td class="name">Maker II<small>B0D5HWC77Q</small></td><td class="n">22</td><td class="n">22</td><td class="n">72</td><td class="n">6</td><td><span class="pill g">תקין</span></td></tr>
+        <tr><td class="name">Maker PRO<small>B0DLWB1L4G</small></td><td class="n">25</td><td class="n">26</td><td class="n">126</td><td class="n">4</td><td><span class="pill g">תקין</span></td></tr>
+        <tr><td class="name">Machine II<small>B0DDJ9FDTK · חדש ומחודש</small></td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td><span class="pill c">out_of_stock</span></td></tr>
+        <tr><td class="name">Machine PRO<small>B0DDJ8NW7V</small></td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td><span class="pill c">out_of_stock</span></td></tr>
+        <tr><td class="name">מכונה + פוד בירה<small>B0CXN5S8TR</small></td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td><span class="pill c">out_of_stock</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="call crit">
+    <div class="ct">Critical</div>
+    <p><strong>פוד הקפה — המוצר עם 784 היחידות ו‑25.9% ההמרה — מציג ‎0‎ יחידות זמינות למכירה.</strong>
+       108 יחידות רשומות במערכת, מהן 19 שמורות להזמנות פתוחות ו‑25 עדיין בקליטה במחסן.
+       גם Jungle Blend על אפס. אלה שני המוצרים עם מחזור המכירות המהיר ביותר בקטלוג.</p>
+  </div>
+
+  <div class="body">
+    <p>דוח החידוש ממליץ על משלוחים ל‑Red Pod (19 יח׳), Beer Pod (6), Jungle (5), Ocean (3)
+       ופוד קפה (1) בתאריכי 6–7 באוגוסט 2026. כדאי להכפיל את הכמויות האלה: הן מחושבות לפי
+       קצב מכירה נוכחי, וקצב המכירה הנוכחי חסום בעצמו על ידי אזילת המלאי.</p>
+  </div>
+</section>
+
+<!-- ================= 11 ================= -->
+<section id="s11">
+  <div class="shead"><span class="num">11</span><h2>המגמה — 30 הימים האחרונים</h2></div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>מדד</th><th class="n">ממוצע חודשי (12 ח׳)</th><th class="n">30 הימים האחרונים</th><th class="n">שינוי</th></tr></thead>
+      <tbody>
+        <tr><td>הכנסות</td><td class="n">$67,848</td><td class="n">$44,104</td><td class="n"><span class="pill c">−35%</span></td></tr>
+        <tr><td>יחידות</td><td class="n">189</td><td class="n">190</td><td class="n"><span class="pill n">+1%</span></td></tr>
+        <tr><td>Sessions</td><td class="n">6,005</td><td class="n">4,593</td><td class="n"><span class="pill w">−24%</span></td></tr>
+        <tr><td>מכונות שנמכרו</td><td class="n">19.2</td><td class="n">9</td><td class="n"><span class="pill c">−53%</span></td></tr>
+        <tr><td>המרה (USP)</td><td class="n">3.15%</td><td class="n">4.14%</td><td class="n"><span class="pill g">+31%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="call warn">
+    <div class="ct">מה זה אומר</div>
+    <p>היחידות יציבות וההמרה אפילו השתפרה — אבל <strong>מכירות המכונות ירדו בחצי</strong>,
+       וזה מה שמושך את ההכנסה למטה. במקביל התנועה ירדה ב‑24%. שני אלה קשורים:
+       פחות תנועה למכונות ⟵ פחות מכירות מכונות. חלק ניכר מהירידה מוסבר בכך שמספר ליסטינגי
+       מכונות אזלו לחלוטין מהמלאי בתקופה הזו.</p>
+    <p style="margin-top:10px">הערה מתודולוגית: הנתונים של 7 הימים האחרונים בכל דוח אמזון עדיין
+       לא סופיים (חלון ייחוס של 7 ימים למוכר צד ג׳, עם עדכונים ב‑1, 7 ו‑28 יום). קרא את
+       ה‑30 יום כמגמה, לא כמספר סופי.</p>
+  </div>
+</section>
+
+<!-- ================= 12 ================= -->
+<section id="s12">
+  <div class="shead"><span class="num">12</span><h2>איפה יש ביקוש אמיתי</h2></div>
+  <p class="lede">דוח ה‑Search Query Performance של אמזון מודד, בחינם, כמה רכישות יצאו מכל שאילתה
+     <em>אצל כל המוכרים ביחד</em>. ארבעה רבעונים של הנתון הזה מספרים שני דברים מנוגדים.</p>
+
+  <div class="body">
+    <p><strong>הראשון:</strong> כל שוק מדפסות המשקאות באמזון קונה כ‑‎50‎ יחידות ברבעון —
+       כ‑‎200‎ בשנה, אצל כל המוכרים ביחד. אתם מכרתם ‎230‎ מכונות ב‑12 החודשים האחרונים.
+       כלומר אתם כבר מוכרים יותר ממה שביקוש החיפוש בקטגוריה מייצר, וההפרש מגיע ממודעות
+       מותג שנוצרת מחוץ לאמזון. דירוג טוב יותר על "coffee printer" לא יוסיף כמעט כלום —
+       וזה מתאשר בחשבון עצמו: ‎622‎ קליקים על המונח ב‑90 יום, אפס מכירות.</p>
+    <p><strong>השני:</strong> אותו קובץ מראה שוק סמוך שגדול פי אלפים — ואתם כבר מוכרים בו.</p>
+  </div>
+
+  <figure>
+    <figcaption>גודל שוק לפי אשכול, רבעון Q2 2026</figcaption>
+    <p class="figsub">רכישות ברבעון אצל כל המוכרים ביחד. סדרה אחת (גודל שוק), עם נתח Ripples בתווית.</p>
+    <div class="bars">
+      <div class="bar"><span class="bl">קצף קוקטיילים / תחליף חלבון ביצה</span>
+        <span class="track"><span class="fill" style="width:100%;background:var(--pod-carrot)"></span></span>
+        <span class="bv">149,603 · 36 שלכם</span></div>
+      <div class="bar"><span class="bl">מוצרי בר ומיקסולוגיה</span>
+        <span class="track"><span class="fill" style="width:9.9%;background:var(--pod-cham)"></span></span>
+        <span class="bv">14,800 · ~2 שלכם</span></div>
+      <div class="bar"><span class="bl">Cold foam (קפה קר)</span>
+        <span class="track"><span class="fill" style="width:8.3%;background:var(--pod-ocean)"></span></span>
+        <span class="bv">12,441 · 0 שלכם</span></div>
+      <div class="bar"><span class="bl">מדפסות אכילות (עוגות/עוגיות)</span>
+        <span class="track"><span class="fill" style="width:0.4%;background:var(--pod-coffee)"></span></span>
+        <span class="bv">548 · 0 שלכם</span></div>
+      <div class="bar"><span class="bl">מדפסות משקאות (הקטגוריה שלכם)</span>
+        <span class="track"><span class="fill" style="width:0.03%;background:var(--pod-jungle)"></span></span>
+        <span class="bv">49 · 21 שלכם</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--pod-carrot)"></i>קצף קוקטיילים</span>
+      <span><i class="swatch" style="background:var(--pod-cham)"></i>בר ומיקסולוגיה</span>
+      <span><i class="swatch" style="background:var(--pod-ocean)"></i>Cold foam</span>
+      <span><i class="swatch" style="background:var(--pod-coffee)"></i>מדפסות אכילות</span>
+      <span><i class="swatch" style="background:var(--pod-jungle)"></i>מדפסות משקאות</span>
+    </div>
+  </figure>
+
+  <div class="call good">
+    <div class="ct">ההזדמנות המרכזית</div>
+    <p><strong>שוק קצף הקוקטיילים ותחליפי חלבון הביצה: 149,603 רכישות ברבעון.
+       הנתח שלכם: 36. כלומר 0.024%.</strong> ויש לכם כבר מוצר מנצח שם —
+       ה‑Foamer ממיר ב‑16.3% (ו‑53.3% אצל קונים עסקיים), ההחזרות שלו 1.9% בלבד,
+       והוא דורג 4.2 כוכבים. פשוט אף אחד לא רואה אותו.</p>
+  </div>
+
+  <h3>אשכול הקצף — פירוט השאילתות</h3>
+  <div class="tw">
+    <table>
+      <thead><tr>
+        <th>שאילתה</th><th class="n">חיפושים/רבעון</th><th class="n">רכישות בשוק</th>
+        <th class="n">מחיר חציוני</th><th class="n">הופעות Ripples</th><th class="n">קליקים</th><th class="n">רכישות</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="n">egg whites</td><td class="n">247,641</td><td class="n">66,410</td><td class="n">$5.49</td><td class="n">484</td><td class="n">0</td><td class="n">0</td></tr>
+        <tr><td class="n">cold foam</td><td class="n">177,204</td><td class="n">9,650</td><td class="n">$4.76</td><td class="n">8,745</td><td class="n">12</td><td class="n">0</td></tr>
+        <tr><td class="n">bitters</td><td class="n">104,988</td><td class="n">7,583</td><td class="n">$23.99</td><td class="n">121</td><td class="n">1</td><td class="n">0</td></tr>
+        <tr><td class="n">cold foam maker</td><td class="n">95,350</td><td class="n">2,791</td><td class="n">$22.49</td><td class="n">606</td><td class="n">2</td><td class="n">0</td></tr>
+        <tr><td class="n">bartender accessories</td><td class="n">54,784</td><td class="n">1,043</td><td class="n">$8.99</td><td class="n">809</td><td class="n">8</td><td class="n">0</td></tr>
+        <tr><td class="n">cocktail mixers</td><td class="n">44,424</td><td class="n">1,034</td><td class="n">$14.99</td><td class="n">187</td><td class="n">2</td><td class="n">0</td></tr>
+        <tr><td class="n">bitters for cocktails</td><td class="n">32,693</td><td class="n">2,651</td><td class="n">$19.99</td><td class="n">705</td><td class="n">4</td><td class="n">0</td></tr>
+        <tr><td class="n">cocktail garnish</td><td class="n">22,516</td><td class="n">757</td><td class="n">$12.06</td><td class="n">545</td><td class="n">3</td><td class="n">1</td></tr>
+        <tr><td class="n">fee foam</td><td class="n">9,127</td><td class="n">2,798</td><td class="n">$7.53</td><td class="n"><span class="pill w">3,277</span></td><td class="n">3</td><td class="n">1</td></tr>
+        <tr><td class="n">aquafaba</td><td class="n">7,856</td><td class="n">588</td><td class="n">$12.99</td><td class="n">527</td><td class="n">1</td><td class="n">0</td></tr>
+        <tr><td class="n">cocktail foamer</td><td class="n">2,985</td><td class="n">198</td><td class="n">$7.49</td><td class="n">2,941</td><td class="n">35</td><td class="n"><span class="pill g">5</span></td></tr>
+        <tr><td class="n">fee foam for cocktails</td><td class="n">2,051</td><td class="n">536</td><td class="n">$7.07</td><td class="n"><span class="pill w">2,649</span></td><td class="n">11</td><td class="n">0</td></tr>
+        <tr><td class="n">aquafaba for cocktails</td><td class="n">1,702</td><td class="n">206</td><td class="n">$7.75</td><td class="n">1,198</td><td class="n">23</td><td class="n">2</td></tr>
+        <tr><td class="n">foaming bitters</td><td class="n">493</td><td class="n">114</td><td class="n">$7.29</td><td class="n">429</td><td class="n">3</td><td class="n">1</td></tr>
+        <tr><td class="n">egg white for cocktails</td><td class="n">365</td><td class="n">31</td><td class="n">$7.50</td><td class="n">416</td><td class="n">12</td><td class="n">2</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="call warn">
+    <div class="ct">הבעיה שחוסמת את האשכול הזה</div>
+    <p>שים לב לעמודת המחיר החציוני: <strong>‎$7.07–$7.75‎</strong> כמעט בכל שאילתה.
+       ה‑Foamer שלכם מתומחר ב‑‎$34.97‎ — פי 4.7 ממה שהשוק משלם.
+       זה מסביר למה על "fee foam" קיבלתם ‎3,277‎ הופעות ורק ‎3‎ קליקים (CTR של 0.09%):
+       הקונה רואה ‎$35‎ ליד ‎$7.50‎ ולא לוחץ.</p>
+    <p style="margin-top:10px">אבל הבקבוק שלכם מספיק ל‑<strong>500 משקאות</strong> —
+       כלומר ‎$0.07‎ למשקה. Fee Foam בנפח 5 אונקיות מספיק לכ‑150 משקאות, כלומר ‎$0.05‎.
+       אתם באותו טווח ערך. <em>הליסטינג פשוט אף פעם לא אומר את זה.</em></p>
+  </div>
+
+  <div class="body">
+    <p>ניתוח סל הקניות מאשר שאתם כבר נמצאים בקבוצת ההשוואה: קוני ה‑Foamer רוכשים באותו סל
+       <strong>Wonderfoam Cocktail Foamer</strong> (‎9.72%‎ מההזמנות) ו‑<strong>Fee Brothers
+       Fee Foam</strong> (‎5.56%‎). אלה שני היעדים המדויקים לקמפייני Product Targeting.</p>
+  </div>
+</section>
+
+<!-- ================= 13 ================= -->
+<section id="s13">
+  <div class="shead"><span class="num">13</span><h2>חמישה מנועי צמיחה, מדורגים</h2></div>
+  <p class="lede">מדורג לפי ודאות הראיות × גודל, לא לפי כמה שזה נשמע מרשים.</p>
+
+  <div class="engine">
+    <div class="ehead"><span class="rank">01</span><h3>המרה של ליסטינגי המכונות</h3>
+      <span class="esize">פוטנציאל: +$120K–260K בשנה</span></div>
+    <p class="why">זה המספר הגדול ביותר בדוח, והוא לא דורש ולו קליק אחד נוסף.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>ASIN</th><th class="n">Sessions/שנה</th><th class="n">המרה נוכחית</th><th class="n">יח׳</th><th class="n">אם ההמרה הייתה…</th><th class="n">יח׳ נוספות</th><th class="n">שווי</th></tr></thead>
+        <tbody>
+          <tr><td class="name">Maker II<small>B0D5HWC77Q</small></td><td class="n">30,264</td><td class="n">0.43%</td><td class="n">129</td><td class="n">0.60%</td><td class="n">+53</td><td class="n">+$126,140</td></tr>
+          <tr><td class="name">Maker II — תרחיש עליון</td><td class="n">30,264</td><td class="n">0.43%</td><td class="n">129</td><td class="n">0.79% (כמו PRO)</td><td class="n">+110</td><td class="n">+$261,800</td></tr>
+          <tr><td class="name">Maker PRO<small>B0DLWB1L4G</small></td><td class="n">11,201</td><td class="n">0.79%</td><td class="n">88</td><td class="n">1.00%</td><td class="n">+24</td><td class="n">+$71,928</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="why"><strong>מה חוסם:</strong> אמון. יש 11 ביקורות על מוצר ב‑$2,380 ו‑<em>ביקורת אחת</em>
+       על מוצר ב‑$2,997. הרף הרשמי של אמזון ל"מוכנות קמעונאית" הוא 5 ביקורות ו‑3.5 כוכבים —
+       אתם עומדים בו, אבל לא בציפיות של קונה שמוציא ‎$2,400‎ על ציוד מסחרי.
+       חציית סף של 100+ ביקורות היא השיפור המתועד ביותר בשיעורי המרה שקיים.</p>
+    <p class="why" style="margin-top:8px"><strong>הפעולות:</strong> ראה אודיט הליסטינגים בפרק 14 —
+       כותרות, תמונות, טבלת השוואה Maker II מול PRO, ותוכנית ביקורות.</p>
+  </div>
+
+  <div class="engine">
+    <div class="ehead"><span class="rank">02</span><h3>הבסיס המותקן — פודים ומתכלים</h3>
+      <span class="esize">פוטנציאל: +$60K–110K בשנה</span></div>
+    <p class="why">כל מכונה שנמכרת מייצרת זרם הכנסה חוזר. פוד הקפה ממיר ב‑<strong>25.9%</strong>,
+       הלקוחות החוזרים כבר ‎24.1%‎ מכלל הלקוחות, והמכירות החוזרות עלו ב‑‎67%‎ ברבעון.
+       זה החלק הבטוח ביותר של העסק — והוא כרגע חנוק בשלושה מקומות.</p>
+    <ul class="clean">
+      <li><strong>מלאי אפס על שני המוצרים הכי מהירים.</strong> פוד קפה: ‎0‎ יחידות זמינות
+          (784 יחידות בשנה). Jungle Blend: ‎0‎. Ocean: ‎2‎. Red: ‎8‎ מול 30 שנמכרו בחודש.
+          <span class="pill c">פעולה מיידית</span></li>
+      <li><strong>Ocean ו‑Jungle יושבים תחת ההורה הלא נכון.</strong> שניהם תואמים
+          <em>ל‑PRO בלבד</em>, אבל הם נמצאים באותה משפחת וריאציות של Maker II.
+          התוצאה: Ocean מקבל 2,915 sessions וממיר ב‑2.64% — פי 6 פחות מפוד הקפה —
+          כי רוב המבקרים בכלל לא יכולים להשתמש בו. תיקון המבנה לבדו שווה
+          <strong>+$40K–90K</strong> בשנה בתמחור נוכחי.</li>
+      <li><strong>אין Subscribe &amp; Save ואין מארזים.</strong> הפודים הם מוצר מתכלה מובהק.
+          S&amp;S ב‑0% מימון מוכר הוא חינם, מקנה תג ומייצר הזמנות חוזרות אוטומטיות.
+          מארז 3 פודים מעורבים במחיר משתלם מעלה את ערך ההזמנה וגם מקטין את בלבול התאימות.</li>
+    </ul>
+  </div>
+
+  <div class="engine">
+    <div class="ehead"><span class="rank">03</span><h3>ה‑Foamer — כניסה לשוק אמיתי</h3>
+      <span class="esize">פוטנציאל: +$35K–70K בשנה</span></div>
+    <p class="why">‎149,603‎ רכישות ברבעון בשוק, ‎36‎ שלכם. המוצר עצמו מוכיח את עצמו:
+       ‎16.3%‎ המרה, ‎1.9%‎ החזרות, ‎4.2‎ כוכבים מ‑31 ביקורות, ‎53.3%‎ המרה אצל קונים עסקיים.</p>
+    <ol class="steps">
+      <li><strong>הליסטינג בלי A+ בכלל.</strong> אפס מודולים, אין Brand Story, 5 תמונות.
+          זה המוצר עם הפוטנציאל הכי גדול והליסטינג הכי דל בקטלוג.</li>
+      <li><strong>הוסיפו SKU בגודל טעימה ב‑‎$12.99–14.99‎.</strong> זה מכניס אתכם לטווח המחירים
+          שבו מתרחשות ‎3,900‎ רכישות ברבעון על שאילתות הקצף הישירות, בלי לוותר על
+          בקבוק ה‑‎$34.97‎ למקצוענים.</li>
+      <li><strong>ספרו את מתמטיקת המחיר.</strong> "500 משקאות · ‎$0.07‎ למשקה" חייב להיות
+          על התמונה הראשית ובנקודה הראשונה — לא קבור בנקודה 2.</li>
+      <li><strong>Product Targeting על שני היעדים שאמזון כבר זיהתה:</strong>
+          <code>B08BT74M3N</code> (Wonderfoam) ו‑<code>B000NV69WO</code> (Fee Brothers Fee Foam).
+          הקונים שלכם כבר קונים אותם באותו סל.</li>
+      <li><strong>Vine.</strong> זה ה‑ASIN היחיד בקטלוג שבו Vine הגיוני כלכלית —
+          עלות יחידה נמוכה, וכל ביקורת שווה יותר בקטגוריה עם ‎$7.50‎ מחיר חציוני.
+          הרשמה אחת בלבד לכל ASIN אי‑פעם, ורק לפני שהליסטינג נעול.</li>
+    </ol>
+  </div>
+
+  <div class="engine">
+    <div class="ehead"><span class="rank">04</span><h3>B2B — הערוץ שכבר עובד ואף אחד לא מנהל</h3>
+      <span class="esize">פוטנציאל: +$50K–100K בשנה</span></div>
+    <p class="why">‎29.0%‎ מההכנסה מגיעה מ‑‎4.8%‎ מהתנועה. קונים עסקיים ממירים
+       פי 3 עד פי 14 על אותו דף מוצר — ‎72.8%‎ על פוד הקפה מול ‎25.9%‎ כללי.
+       אין בחשבון ולו קמפיין, כותרת או תמונה אחת שמכוונת אליהם.</p>
+    <ul class="clean">
+      <li>הגדירו <strong>Business Price ומדרגות כמות</strong> על כל הפודים ועל ה‑Foamer.
+          זה המנוף הישיר ביותר על קונה שכבר קונה 2–3 יחידות בהזמנה.</li>
+      <li>הוסיפו לכל ליסטינג מכונה תמונה אחת שמדברת עסקית: בית קפה, בר, מלון, קייטרינג,
+          כמה משקאות בשעה, כמה זמן התקנה, מה כלול באחריות.</li>
+      <li>קמפיין SP נפרד לקהל Amazon Business על מונחי ציוד מסחרי
+          (<code>cafe equipment commercial</code>, <code>event coffee printer</code> —
+          שניהם מופיעים בהשלמה האוטומטית של אמזון).</li>
+      <li>ה‑SKU של <em>Maker II + Travel Case</em> הוא מוצר B2B מובהק (אירועים וקייטרינג)
+          אבל הוא FBM עם דירוג CX <span class="pill c">Very poor</span> והחזרה אחת מתוך
+          ארבע מכירות בגלל "Damaged item". <strong>עברו ל‑FBA ותקנו את האריזה לפני שמקדמים אותו.</strong></li>
+    </ul>
+  </div>
+
+  <div class="engine">
+    <div class="ehead"><span class="rank">05</span><h3>ביקושים סמוכים — לבדוק, לא להמר</h3>
+      <span class="esize">פוטנציאל: לא ידוע · עלות בדיקה נמוכה</span></div>
+    <ul class="clean">
+      <li><span class="pill c">להפסיק</span> <strong>"edible printer".</strong>
+          ‎69,258‎ חיפושים, ‎267‎ רכישות ברבעון, מחיר חציוני ‎$119.99‎.
+          קיבלתם שם ‎57,825‎ הופעות ו‑‎280‎ קליקים ברבעון — ו<strong>אפס רכישות</strong>.
+          זה קונה מדפסת עוגות ב‑$120, לא קונה ציוד בר ב‑$2,380. סגרו.</li>
+      <li><span class="pill g">לבדוק</span> <strong>Cold foam.</strong> ‎177,204‎ חיפושים
+          ו‑‎12,441‎ רכישות ברבעון בין "cold foam" ל‑"cold foam maker".
+          כבר יש לכם ‎8,745‎ הופעות שם. ה‑Foamer רלוונטי מבחינה פונקציונלית.</li>
+      <li><span class="pill g">לבדוק</span> <strong>ספרדית.</strong>
+          <code>impresora de cafe</code>, <code>impresora para cafe</code>,
+          <code>impresora comestible</code> — כבר מקבלים 1,700–1,900 הופעות לשאילתה
+          בלי מאמץ. הוספת מונחים ספרדיים ל‑Backend Keywords היא עלות אפס.</li>
+      <li><span class="pill w">לשקול</span> <strong>אירועים וחתונות.</strong> אחת ההחזרות
+          השנה נבעה מ<em>"did not arrive in time for the event"</em> — קונה אירועים הוא
+          קונה דחוף בעל ערך גבוה. השלמה אוטומטית מאשרת ביקוש על
+          <code>event coffee printer</code>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 14 ================= -->
+<section id="s14">
+  <div class="shead"><span class="num">14</span><h2>אודיט ליסטינגים — מה שראיתי בדפים החיים</h2></div>
+  <p class="lede">נקרא ישירות מ‑amazon.com ב‑1 באוגוסט 2026. כל ממצא ניתן לאימות בדף עצמו.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>ASIN</th><th class="n">כוכבים</th><th class="n">ביקורות</th><th class="n">תמונות</th><th class="n">וידאו</th><th>A+</th><th>Brand Story</th><th class="n">אורך כותרת</th><th>קטגוריה</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Maker II<small>B0D5HWC77Q</small></td><td class="n">4.6</td><td class="n"><span class="pill w">11</span></td><td class="n">6</td><td class="n">5</td><td><span class="pill g">Premium</span></td><td><span class="pill g">כן</span></td><td class="n">152</td><td>Kitchen &amp; Dining</td></tr>
+        <tr><td class="name">Maker PRO<small>B0DLWB1L4G</small></td><td class="n">5.0</td><td class="n"><span class="pill c">1</span></td><td class="n">7</td><td class="n">5</td><td><span class="pill g">Premium</span></td><td><span class="pill g">כן</span></td><td class="n"><span class="pill c">192</span></td><td><span class="pill c">Industrial &amp; Scientific</span></td></tr>
+        <tr><td class="name">Machine II<small>B0DDJ9FDTK</small></td><td class="n">4.1</td><td class="n"><span class="pill c">3</span></td><td class="n">7</td><td class="n">1</td><td><span class="pill g">Premium</span></td><td><span class="pill g">כן</span></td><td class="n">142</td><td>Home &amp; Kitchen · <span class="pill c">אזל</span></td></tr>
+        <tr><td class="name">פוד בירה<small>B0DD7KVD78</small></td><td class="n">3.9</td><td class="n"><span class="pill w">9</span></td><td class="n">8</td><td class="n"><span class="pill c">0</span></td><td><span class="pill w">בסיסי</span></td><td><span class="pill g">כן</span></td><td class="n">120</td><td>Home &amp; Kitchen</td></tr>
+        <tr><td class="name">Foamer<small>B0FNW85YY4</small></td><td class="n">4.2</td><td class="n">31</td><td class="n"><span class="pill w">5</span></td><td class="n">2</td><td><span class="pill c">אין כלל</span></td><td><span class="pill c">אין</span></td><td class="n">120</td><td>Grocery</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="fixbox">
+    <div class="fh"><h4>Maker II — מכונה + פוד קפה</h4><span class="asin">B0D5HWC77Q</span>
+      <span class="price">$2,380 · 129 יח׳/שנה · המרה 0.43%</span></div>
+    <div class="fb">
+      <div class="statline">
+        <span class="pill g">Premium A+ ✓</span><span class="pill g">Brand Story ✓</span>
+        <span class="pill w">11 ביקורות</span><span class="pill w">6 תמונות</span>
+        <span class="pill c">החזרות 19.4%</span><span class="pill n">BSR #274,692</span>
+      </div>
+      <p class="diag"><strong>הכותרת הנוכחית</strong> (152 תווים):
+        <code>Ripples The Original Maker II, Print on Beverage Foam and Desserts, Plant-Based
+        Ingredients Only, Selfie and Personalized Designs (Machine + Coffee Pod)</code></p>
+      <ul class="fixlist">
+        <li><strong>הכותרת לא מכילה את המונח שהקונה מקליד.</strong> אין בה
+            <code>coffee printer</code>, אין <code>latte art printer</code>, אין
+            <code>drink printer</code>. הביטוי שמדרג חייב להופיע <em>ברצף ובקדמת הכותרת</em> —
+            פיזור מילים בודדות לא עובד. הצעה:<br>
+            <span class="now">Ripples Maker II Coffee Printer — Latte Art &amp; Drink Printer for Foam-Topped
+            Beverages | Prints in 10 Seconds | WiFi | Plant-Based Ink | Machine + Coffee Pod</span></li>
+        <li><strong>6 תמונות בלבד למוצר ב‑$2,380.</strong> חסרות: מה יש בקופסה,
+            סקייל אמיתי על דלפק בית קפה (הקונה לא יודע כמה זה גדול),
+            לפני/אחרי על כוס אמיתית, ומסך אחד עסקי — כמה משקאות בשעה, זמן התקנה.</li>
+        <li><strong>אין טבלת השוואה Maker II מול PRO.</strong> הקונה רואה שני מוצרים ב‑$2,380
+            ו‑$2,997 בלי לדעת מה ההבדל. זה גם מסביר חלק מההחזרות בסיבת
+            <code>ORDERED_WRONG_ITEM</code>. הוסיפו מודול השוואה — זה גם מודול A+ סטנדרטי.</li>
+        <li><strong>הבהירו "Pods sold separately" בתמונה, לא בנקודה.</strong>
+            נקודה 2 אומרת "Additional pods sold separately" בסוף משפט ארוך.
+            קונה שמצפה לערכה שלמה מחזיר מכונה של $2,380.</li>
+        <li><strong>תוכנית ביקורות.</strong> 11 ביקורות אחרי שנה זה קצב של פחות מביקורת לחודש.
+            הפעילו Request a Review אוטומטי על כל הזמנת מכונה ביום 20, והוסיפו כרטיס אריזה
+            ניטרלי (בלי תמריץ, בלי בקשת דירוג חיובי — זה אסור).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fixbox">
+    <div class="fh"><h4>Maker PRO — מכונה בלבד</h4><span class="asin">B0DLWB1L4G</span>
+      <span class="price">$2,997 · 88 יח׳/שנה · המרה 0.79%</span></div>
+    <div class="fb">
+      <div class="statline">
+        <span class="pill c">ביקורת אחת</span><span class="pill c">החזרות 17.65%</span>
+        <span class="pill c">קטגוריה שגויה</span><span class="pill c">כותרת 192 תווים</span>
+        <span class="pill g">Premium A+ ✓</span>
+      </div>
+      <ul class="fixlist">
+        <li><strong>הליסטינג יושב ב‑Industrial &amp; Scientific בעוד Maker II ב‑Home &amp; Kitchen.</strong>
+            שני מוצרים מאותה משפחה בשני עצי קטגוריה שונים לא ממליצים אחד על השני,
+            לא חולקים "Customers also viewed", ומדורגים מול קבוצות תחרות שונות לגמרי.
+            <span class="now">העבירו את ה‑PRO לאותו browse node של Maker II.</span></li>
+        <li><strong>192 תווים בכותרת</strong> — כשליש נחתך בתוצאות החיפוש ובנייד.
+            קצרו ל‑‎~150‎ ושימו את <code>Coffee Printer</code> בהתחלה.</li>
+        <li><strong>שיעור ההחזרות הגבוה בקטלוג: 17.65%.</strong> הסיבות בפועל:
+            <code>NOT_AS_DESCRIBED</code> ×3, <code>QUALITY_UNACCEPTABLE</code>,
+            <code>MISSING_PARTS</code>, <code>DEFECTIVE</code>. הדפוס הזה אומר שהציפייה
+            שנבנתה בדף גדולה ממה שמגיע בקופסה. תמונת "What's in the box" מפורטת
+            כתמונה מספר 2 היא התיקון הזול והמהיר ביותר.</li>
+        <li><strong>ביקורת אחת.</strong> מוצר ב‑$2,997 עם ביקורת אחת הוא סיכון תפוס עבור הקונה.
+            זה חוסם את ההמרה יותר מכל דבר אחר בדף.</li>
+        <li>נקודה 6 בליסטינג של ה‑PRO כתוב בה <em>"Every Ripple Maker <strong>II</strong> comes with…"</em>
+            — טעות העתקה בליסטינג של ה‑PRO.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fixbox">
+    <div class="fh"><h4>משפחת הפודים</h4><span class="asin">B0DD7KVD78 + 6 נוספים</span>
+      <span class="price">$140–$280 · 1,451 יח׳/שנה</span></div>
+    <div class="fb">
+      <div class="statline">
+        <span class="pill c">אפס וידאו</span><span class="pill w">A+ בסיסי בלבד</span>
+        <span class="pill c">בלבול שמות</span><span class="pill c">מבנה וריאציות שגוי</span>
+        <span class="pill c">3 קטגוריות שונות</span>
+      </div>
+      <ul class="fixlist">
+        <li><strong>"Beer Pod" בכותרת, "Malt Pod" בנקודה 5 — של אותו ליסטינג.</strong>
+            לקוח כתב בהחזרה: <em>"Needed the coffee pod, not the malt pod."</em>
+            אחר כתב <em>"I ended up needed the beer pods and not the coffee pod."</em>
+            <span class="now">שם אחד למוצר אחד, בכל מקום.</span> שיעור ההחזרה על הפוד הזה ‎20%‎.</li>
+        <li><strong>אפס סרטונים על מוצר שכל הערך שלו ויזואלי.</strong> 15 שניות של הדפסה
+            על קצף בזמן אמת יסבירו יותר מכל נקודה.</li>
+        <li><strong>Ocean ו‑Jungle תואמים ל‑PRO בלבד</strong> אבל יושבים במשפחת ה‑Maker II.
+            זו הסיבה ש‑Ocean ממיר ב‑2.64% (מול 25.9% לפוד קפה) למרות 2,915 sessions.
+            <span class="now">או להוציא אותם למשפחה נפרדת, או לשים תג "PRO ONLY" על ה‑swatch
+            ובפינת התמונה הראשית.</span></li>
+        <li><strong>טבלת תאימות כתמונה מספר 2</strong> על כל פוד: מי מתאים ל‑Maker II,
+            מי ל‑PRO, מי לשניהם. זה מוריד גם החזרות וגם פניות שירות.</li>
+        <li><strong>הפודים מפוזרים על שלוש קטגוריות</strong> — Kitchen, Home &amp; Kitchen
+            ו‑Health &amp; Personal Care (Ocean ו‑Chameleon). איחוד לקטגוריה אחת מרכז את
+            אות הרלוונטיות ואת דירוג ה‑BSR.</li>
+        <li><strong>Subscribe &amp; Save ומארזים.</strong> מוצר מתכלה עם ‎24%‎ לקוחות חוזרים
+            שאין עליו מנוי — זו הזדמנות חינם.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fixbox">
+    <div class="fh"><h4>Ripples Foamer — הליסטינג עם הפער הגדול ביותר</h4>
+      <span class="asin">B0FNW85YY4</span>
+      <span class="price">$34.97 · 589 יח׳/שנה · המרה 16.3%</span></div>
+    <div class="fb">
+      <div class="statline">
+        <span class="pill c">0 מודולי A+</span><span class="pill c">אין Brand Story</span>
+        <span class="pill w">5 תמונות</span><span class="pill g">החזרות 1.9%</span>
+        <span class="pill g">31 ביקורות · 4.2★</span><span class="pill g">B2B 53.3%</span>
+      </div>
+      <p class="diag">המוצר עם שוק בן ‎149,603‎ רכישות ברבעון מקבל את הליסטינג החלש בקטלוג.
+        זה התיקון עם התשואה הגבוהה ביותר ליחידת מאמץ בכל החשבון.</p>
+      <ul class="fixlist">
+        <li><strong>בנו A+ מלא + Brand Story.</strong> אין שם כרגע כלום. מודולים נדרשים:
+            השוואה מול חלבון ביצה, מתמטיקת עלות למשקה, 3–4 טיפות בפעולה,
+            תגי vegan/kosher/gluten‑free, שימוש בבר מול שימוש ביתי.</li>
+        <li><strong>מתמטיקת המחיר חייבת להיות על התמונה הראשית.</strong>
+            "500 drinks per bottle · ‎$0.07‎ per drink". כרגע זה קבור בנקודה 2 והשוק
+            רואה רק ‎$34.97‎ מול ‎$7.49‎.</li>
+        <li><strong>הוסיפו 4 תמונות</strong> (5 זה מעט): מדידת טיפות, השוואה ויזואלית
+            לקצף חלבון ביצה, שימוש מאחורי בר, ותמונת מרכיב אחד — quillaja.</li>
+        <li><strong>SKU טעימה ב‑‎$12.99–14.99‎.</strong> נכנס לטווח שבו מתרחשות
+            ‎3,900‎ רכישות ברבעון, בלי לגעת בבקבוק המקצועי.</li>
+        <li><strong>‎12%‎ מהביקורות הן כוכב אחד</strong> (61/27/0/0/12). על 31 ביקורות
+            זה ארבע ביקורות שליליות — קראו אותן לפני שמזרימים תקציב פנימה.</li>
+        <li><strong>Product Targeting:</strong> <code>B08BT74M3N</code> · <code>B000NV69WO</code> ·
+            <code>B08X77VP4S</code> — שלושתם כבר מופיעים בנתוני החשבון שלכם עם המרות.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="fixbox">
+    <div class="fh"><h4>Machine II — 8,183 sessions שנזרקות</h4>
+      <span class="asin">B0DDJ9FDTK</span><span class="price">אזל · 4 יח׳/שנה</span></div>
+    <div class="fb">
+      <ul class="fixlist">
+        <li>הליסטינג קיבל ‎8,183‎ sessions בשנה — יותר מכל הפודים יחד — ומכר ‎4‎ יחידות,
+            כי אין מלאי. ה‑BSR שלו צנח ל‑#4,008,030.</li>
+        <li><span class="now">שתי אפשרויות:</span> לחדש מלאי, או למזג את ה‑ASIN למשפחת
+            הווריאציות של Maker II כדי שהתנועה תזרום ל‑ASIN שיש בו מלאי.
+            <strong>להשאיר אותו כמו שהוא זו הזריקה של רבע מהתנועה השנתית.</strong></li>
+        <li>אותו טיפול נדרש ל‑<code>B0CXN5S8TR</code> (3,866 sessions · 3 יח׳),
+            <code>B0D233RPN6</code> (1,423 sessions · <strong>0</strong> יח׳) ו‑<code>B0D8SKRRXJ</code>.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 15 ================= -->
+<section id="s15">
+  <div class="shead"><span class="num">15</span><h2>תוכנית 90 יום</h2></div>
+  <p class="lede">סדר הפעולות נקבע לפי "כמה מהר זה משפיע" × "כמה זה עולה", לא לפי חשיבות.</p>
+
+  <div class="call">
+    <div class="ct">היקף</div>
+    <p>הטבלה שלהלן היא <strong>מפת הדרכים הרבעונית</strong> — מה קורה ובאיזה סדר.
+       <strong>תוכנית המדיה המלאה לאוגוסט</strong> — חלוקת התקציב ל‑19 קמפיינים,
+       רשימת 16 הקמפיינים לסגירה, 10 הקמפיינים החדשים ושינויי הביד והמיקום ברמת המטרה —
+       נמצאת <strong>במסמך נפרד</strong>: «תוכנית מכירה — אוגוסט 2026».</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th class="n">שבוע</th><th>פעולה</th><th>למה עכשיו</th><th>מדד הצלחה</th></tr></thead>
+      <tbody>
+        <tr><td class="n">1</td><td class="w"><strong>חידוש מלאי:</strong> פוד קפה, Jungle, Ocean, Red — בכמות כפולה מההמלצה של אמזון</td><td class="w">שני המוצרים המהירים ביותר על אפס זמין</td><td class="w">‎0‎ ימי אזילה על פודים</td></tr>
+        <tr><td class="n">1</td><td class="w"><strong>ביטול Off Amazon</strong> + מקדם ‎−60%‎ ל‑Product pages + ‎+50%‎ ל‑Top of Search</td><td class="w">‎$1,878‎ ברבעון על אפס מכירות</td><td class="w">ACOS משוקלל מתחת ל‑15%</td></tr>
+        <tr><td class="n">1</td><td class="w"><strong>השהיית 22 קמפייני SB Video</strong> + שלילי מדויק על <code>coffee maker</code></td><td class="w">‎$3,210‎ ללא תמורה</td><td class="w">חיסכון מיידי</td></tr>
+        <tr><td class="n">2</td><td class="w"><strong>העברת ה‑PRO ל‑browse node של Maker II</strong></td><td class="w">שתי מכונות מאותה משפחה בשני עצי קטגוריה</td><td class="w">BSR מופיע ב‑Kitchen</td></tr>
+        <tr><td class="n">2–3</td><td class="w"><strong>תיקון שם "Beer Pod / Malt Pod"</strong> בכל הליסטינגים + טבלת תאימות כתמונה 2 בכל פוד</td><td class="w">‎20%‎ החזרות על הפוד הזה, סיבה מפורשת בכתב</td><td class="w">החזרות פוד בירה מתחת ל‑10%</td></tr>
+        <tr><td class="n">3–4</td><td class="w"><strong>A+ מלא + Brand Story ל‑Foamer</strong> + 4 תמונות + מתמטיקת עלות למשקה</td><td class="w">הליסטינג עם השוק הגדול ביותר והדף החלש ביותר</td><td class="w">המרה מ‑16.3% ל‑20%+</td></tr>
+        <tr><td class="n">3–4</td><td class="w"><strong>כותרות חדשות</strong> ל‑Maker II ול‑PRO עם ביטוי הדירוג ברצף ובקדמה</td><td class="w">המונח שהקונה מקליד לא מופיע בכותרת</td><td class="w">CTR אורגני ב‑SQP</td></tr>
+        <tr><td class="n">4</td><td class="w"><strong>Ocean + Jungle: הפרדה או תג PRO&nbsp;ONLY</strong></td><td class="w">2,915 sessions ממירים ב‑2.64%</td><td class="w">המרת Ocean מעל 8%</td></tr>
+        <tr><td class="n">5–6</td><td class="w"><strong>Business Price ומדרגות כמות</strong> על כל הפודים ו‑Foamer</td><td class="w">‎29%‎ מההכנסה, אפס אופטימיזציה</td><td class="w">נתח B2B מעל 32%</td></tr>
+        <tr><td class="n">5–6</td><td class="w"><strong>Subscribe &amp; Save</strong> ‎0%‎ מימון מוכר על כל הפודים + מארז 3 פודים</td><td class="w">מוצר מתכלה עם ‎24%‎ לקוחות חוזרים</td><td class="w">הזמנות מנוי &gt; 0</td></tr>
+        <tr><td class="n">6–8</td><td class="w"><strong>Product Targeting ל‑Foamer</strong> על Wonderfoam ו‑Fee Foam + SB Video חדש על מונחי קוקטיילים</td><td class="w">אמזון כבר זיהתה אותם כקבוצת ההשוואה</td><td class="w">‎NTB%‎ מעל 40%</td></tr>
+        <tr><td class="n">7–9</td><td class="w"><strong>מיזוג או חידוש</strong> של B0DDJ9FDTK · B0CXN5S8TR · B0D233RPN6 · B0D8SKRRXJ</td><td class="w">‎16,209‎ sessions מייצרות 13 יחידות</td><td class="w">תנועה ל‑ASIN מת מתחת ל‑5%</td></tr>
+        <tr><td class="n">8–10</td><td class="w"><strong>Vine ל‑Foamer</strong> — אחרי שהליסטינג נעול</td><td class="w">הרשמה אחת בלבד לכל ASIN אי‑פעם</td><td class="w">‎50+‎ ביקורות</td></tr>
+        <tr><td class="n">8–12</td><td class="w"><strong>SKU טעימה ל‑Foamer</strong> ב‑‎$12.99–14.99‎</td><td class="w">‎3,900‎ רכישות/רבעון בטווח ‎$7–8‎</td><td class="w">נתח שוק קצף מעל 0.1%</td></tr>
+        <tr><td class="n">10–12</td><td class="w"><strong>4 תמונות נוספות ומודול השוואה</strong> ל‑Maker II · תוכנית בקשת ביקורות אוטומטית</td><td class="w">11 ביקורות על מוצר ב‑$2,380</td><td class="w">‎25+‎ ביקורות · המרה 0.6%</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= 16 ================= -->
+<section id="s16">
+  <div class="shead"><span class="num">16</span><h2>מקורות הנתונים ומה חסר</h2></div>
+
+  <div class="body">
+    <p>כל מספר בדוח נגזר מהקבצים הבאים בתיקיית הדרייב, או מדפי המוצר החיים ב‑amazon.com
+       שנקראו ב‑1 באוגוסט 2026.</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>קובץ</th><th>תקופה</th><th>נעשה בו שימוש ב־</th></tr></thead>
+      <tbody>
+        <tr><td class="n">BusinessReport Last 12 months</td><td>8.2025–7.2026</td><td>פרקים 1, 2, 3, 5, 11</td></tr>
+        <tr><td class="n">BusinessReport Last 30 Days</td><td>7.2026</td><td>פרק 11</td></tr>
+        <tr><td class="n">Sponsored_Products_Campaign_report (Lifetime + 90d)</td><td>6.2024–7.2026</td><td>פרקים 4, 7, 8</td></tr>
+        <tr><td class="n">Sponsored_Products_Search_term_report</td><td>26.5–29.7.2026</td><td>פרקים 7, 8</td></tr>
+        <tr><td class="n">Sponsored_Products_Targeting_report</td><td>2.5–30.7.2026</td><td>פרק 7 · TOS‑IS</td></tr>
+        <tr><td class="n">Sponsored_Products_Placement_report</td><td>2.5–30.7.2026</td><td>פרק 7</td></tr>
+        <tr><td class="n">Sponsored_Brands_Search_term_report</td><td>26.5–29.7.2026</td><td>פרק 7</td></tr>
+        <tr><td class="n">US_Search_Query_Performance (4 רבעונים)</td><td>Q3.25–Q2.26</td><td>פרקים 4, 8, 12, 13 · גודל שוק</td></tr>
+        <tr><td class="n">US_Repeat_Purchase_Behavior (4 רבעונים)</td><td>Q3.25–Q2.26</td><td>פרק 6</td></tr>
+        <tr><td class="n">US_Market_Basket_Analysis (4 רבעונים)</td><td>Q3.25–Q2.26</td><td>פרק 6</td></tr>
+        <tr><td class="n">FBA Customer Returns</td><td>8.2025–7.2026</td><td>פרק 9</td></tr>
+        <tr><td class="n">Listing_Summary_Report (VoC)</td><td>נוכחי</td><td>פרק 9</td></tr>
+        <tr><td class="n">FBA Inventory + Restock Inventory</td><td>31.7.2026</td><td>פרק 10</td></tr>
+        <tr><td class="n">Fee Preview</td><td>נוכחי</td><td>פרק 9 · חישוב נטו</td></tr>
+        <tr><td class="n">CustomUnifiedTransaction</td><td>1.5–30.7.2026</td><td>פרקים 4, 9</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="call warn">
+    <div class="ct">שלושה דברים שלא ניתן היה לקרוא</div>
+    <p><strong>1. Brand Analytics – Top Search Terms</strong> (‎4.9 GB‎ ו‑‎866 MB‎ בקבצי ZIP).
+       הקבצים גדולים מכדי לעבור דרך המחבר. הם היו נותנים דירוג חיפוש מוחלט וזהות שלושת
+       המוצרים המובילים בכל שאילתה. <em>המלצה: לייצא מחדש עם סינון למותג בלבד.</em></p>
+    <p style="margin-top:8px"><strong>2. תיקייה 5 — Data Dive Organic Ranking</strong> ריקה.
+       ללא נתוני דירוג אורגני היסטוריים אי אפשר להוכיח סיבתיות בין הוצאת פרסום לדירוג.</p>
+    <p style="margin-top:8px"><strong>3. COGS.</strong> לפי בקשתך התעלמתי מעלות המוצר.
+       המשמעות: המספרים כאן הם <em>תרומה לפני COGS</em>, ולא רווח. אי אפשר לקבוע יעד ACOS
+       אמיתי בלי עלות נחיתה — כל יעד כזה יהיה ניחוש. מה שכן חושב כאן הוא <strong>התקרה
+       המוחלטת</strong>: אחרי עמלות אמזון נותרים ‎84.1%‎ ממחיר Maker II, ‎84.2%‎ מ‑PRO,
+       ‎81.7%‎ מפוד קפה ו‑‎71.4%‎ מה‑Foamer. ה‑ACOS האמיתי לאיזון נמוך מהמספרים האלה בדיוק
+       בגובה ה‑COGS.</p>
+  </div>
+</section>
+
+<footer>
+  <p>הוכן עבור Drink Ripples · שוק amazon.com · הנתונים נכונים ל‑1 באוגוסט 2026.
+     מכירות מדווחות כ‑Ordered Product Sales ברוטו לפני החזרות אלא אם צוין אחרת.
+     ייחוס פרסום: 7 ימים, קליק אחרון (מוכר צד ג׳).</p>
+  <p class="byline">הופק על ידי צוות איזי‑קומרס</p>
+</footer>
+
 </div>
+
 </body>
 </html>

@@ -1,9 +1,8 @@
-# Drink Ripples — Amazon Reports
+# Drink Ripples — Amazon Annual Report
 
-Private client reports. Served via GitHub Pages.
+Client report, served via GitHub Pages.
 
-Access is gated by a simple client-side form (see `index.html`). This is a soft gate for
-convenience, NOT security — the page source is public. Do not add anything here that must
-stay confidential.
+Access is gated by a simple client-side form. This is a soft gate for convenience,
+NOT security — the page source is public. Do not add anything here that must stay confidential.
 
-Built by Easy-Commerce.
+Produced by Easy-Commerce.
