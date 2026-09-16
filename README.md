@@ -1,8 +1,8 @@
-# Drink Ripples — Amazon Annual Report
+# Drink Ripples — דוחות
 
-Client report, served via GitHub Pages.
+אזור מוגבל. גישה עם שם משתמש וסיסמה.
 
-Access is gated by a simple client-side form. This is a soft gate for convenience,
-NOT security — the page source is public. Do not add anything here that must stay confidential.
+- `index.html` — סיכום שנתי, אמזון US
+- `uk.html` — ניתוח שוק, אמזון UK
 
-Produced by Easy-Commerce.
+הופק על ידי צוות איזי-קומרס.

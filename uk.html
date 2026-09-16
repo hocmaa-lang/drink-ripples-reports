@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Drink Ripples — שוק אמזון בריטניה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Heebo:wght@300;400;700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#17151A; --bg2:#1E1C21; --card:#242128; --line:#332F38; --hair:#2B2830;
+  --cream:#EFE6DC; --body:#C3BBB4; --dim:#8B8289;
+  --orange:#DD7526; --orange2:#F0913F; --gold:#C9A227; --green:#4FA87B;
+  --sans:'Assistant',system-ui,sans-serif;
+  --disp:'Heebo','Assistant',sans-serif;
+  --mono:'IBM Plex Mono','Assistant',monospace;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--body);font-family:var(--sans);font-size:17px;line-height:1.75;
+ -webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ---------- gate ---------- */
+#gate{position:fixed;inset:0;background:var(--bg);z-index:999;display:flex;align-items:center;justify-content:center;padding:24px}
+#gate .box{width:100%;max-width:400px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:34px 30px;text-align:center}
+#gate .mark{width:46px;height:46px;border-radius:50%;border:2px solid var(--orange);margin:0 auto 18px;display:flex;align-items:center;justify-content:center;
+ font-family:var(--disp);font-weight:900;color:var(--orange);font-size:20px}
+#gate h1{font-family:var(--disp);font-weight:700;font-size:21px;color:var(--cream);margin-bottom:6px}
+#gate p{font-size:14px;color:var(--dim);margin-bottom:20px}
+#gate input{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:9px;padding:12px 14px;color:var(--cream);
+ font-family:var(--sans);font-size:15px;margin-bottom:10px;text-align:right}
+#gate input:focus{outline:none;border-color:var(--orange)}
+#gate button{width:100%;background:var(--orange);color:#17151A;border:0;border-radius:9px;padding:12px;
+ font-family:var(--sans);font-weight:700;font-size:15px;cursor:pointer;transition:.15s}
+#gate button:hover{background:var(--orange2)}
+#gate .err{color:#E2735C;font-size:13.5px;height:18px;margin-top:9px}
+#doc{display:none}
+
+/* ---------- hero ---------- */
+.hero{padding:74px 0 44px;border-bottom:1px solid var(--hair);
+ background:radial-gradient(1000px 420px at 88% -12%,rgba(221,117,38,.13),transparent 62%)}
+.kick{font-size:12.5px;font-weight:700;color:var(--orange);letter-spacing:.06em;margin-bottom:16px}
+.hero h1{font-family:var(--disp);font-weight:900;font-size:clamp(32px,5.4vw,56px);line-height:1.1;color:var(--cream);margin-bottom:16px}
+.hero .lede{font-size:19.5px;color:var(--body);max-width:730px;font-weight:300}
+.hero .lede b{color:var(--cream);font-weight:600}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:38px 0 0}
+.stat{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--orange);border-radius:12px;padding:20px}
+.stat .v{font-family:var(--mono);font-weight:600;font-size:30px;color:var(--cream);direction:ltr;line-height:1.1}
+.stat .l{font-size:13.5px;color:var(--dim);margin-top:7px;line-height:1.5}
+
+/* ---------- sections ---------- */
+section{padding:56px 0;border-bottom:1px solid var(--hair)}
+section:last-of-type{border-bottom:0}
+.snum{font-family:var(--mono);font-size:12.5px;color:var(--orange);margin-bottom:9px}
+h2{font-family:var(--disp);font-weight:700;font-size:clamp(25px,3.4vw,34px);color:var(--cream);line-height:1.22;margin-bottom:14px}
+h3{font-family:var(--disp);font-weight:700;font-size:19.5px;color:var(--cream);margin:32px 0 12px}
+p{margin-bottom:15px;max-width:820px}
+p b,strong{color:var(--cream);font-weight:600}
+.big{font-size:19.5px;color:var(--cream);font-weight:300;line-height:1.65}
+
+/* ---------- table ---------- */
+.tw{overflow-x:auto;margin:22px 0;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:600px}
+th{background:#2A262F;color:var(--cream);font-weight:700;text-align:right;padding:13px 16px;font-size:13.5px;white-space:nowrap}
+td{padding:12px 16px;border-top:1px solid var(--hair);vertical-align:top}
+tbody tr:nth-child(even){background:rgba(255,255,255,.017)}
+td.n{font-family:var(--mono);font-weight:600;direction:ltr;text-align:center;white-space:nowrap;color:var(--cream)}
+td.c{text-align:center}
+.hi{color:var(--orange);font-weight:700}
+.up{color:var(--green);font-weight:700}
+tr.mark td{background:rgba(221,117,38,.09)}
+tr.mark td.n{color:var(--orange2)}
+
+/* ---------- ladder ---------- */
+.ladder{margin:26px 0}
+.rung{display:flex;gap:18px;align-items:flex-start;padding:19px 22px;background:var(--card);
+ border:1px solid var(--line);border-radius:12px;margin-bottom:11px;position:relative;overflow:hidden}
+.rung::before{content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:4px;background:var(--orange);opacity:.5}
+.rung.base::before{opacity:1}
+.rung .fl{flex:0 0 122px;text-align:center}
+.rung .fl .n{font-family:var(--mono);font-weight:600;font-size:25px;color:var(--orange2);direction:ltr;line-height:1.1}
+.rung .fl .u{font-size:11.5px;color:var(--dim);margin-top:3px}
+.rung .tx{flex:1;min-width:0}
+.rung .tx .t{font-family:var(--disp);font-weight:700;font-size:17.5px;color:var(--cream);margin-bottom:4px}
+.rung .tx .d{font-size:15px;color:var(--body);line-height:1.6}
+
+/* ---------- cards ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(275px,1fr));gap:15px;margin:22px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card .h{font-family:var(--disp);font-weight:700;font-size:17px;color:var(--cream);margin-bottom:8px}
+.card .h .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--orange);margin-inline-end:8px;vertical-align:middle}
+.card p{font-size:15px;margin-bottom:0;color:var(--body)}
+
+.quote{border-inline-start:3px solid var(--orange);background:rgba(221,117,38,.06);
+ padding:20px 24px;border-radius:0 12px 12px 0;margin:26px 0}
+.quote p{margin:0;font-size:18.5px;color:var(--cream);font-weight:300;line-height:1.6}
+
+.lat{font-family:var(--mono);font-size:14px;direction:ltr;unicode-bidi:embed;color:var(--cream)}
+.was{color:var(--dim);text-decoration:line-through;text-decoration-color:rgba(139,130,137,.5)}
+.now{color:var(--green);font-weight:600}
+
+ul.li{list-style:none;margin:14px 0 18px}
+ul.li li{position:relative;padding-inline-start:20px;margin-bottom:10px;max-width:820px}
+ul.li li::before{content:"";position:absolute;inset-inline-start:0;top:11px;width:7px;height:7px;border-radius:50%;background:var(--orange)}
+
+.spec{display:grid;grid-template-columns:150px 1fr;gap:2px 16px;margin:16px 0;font-size:15px}
+.spec dt{color:var(--dim)}
+.spec dd{color:var(--cream)}
+
+footer{padding:38px 0 60px;color:var(--dim);font-size:13.5px}
+footer b{color:var(--body)}
+@media(max-width:640px){
+  body{font-size:16px}
+  .rung{flex-direction:column;gap:10px}
+  .rung .fl{text-align:right;flex:auto}
+  .spec{grid-template-columns:1fr}
+  .spec dt{color:var(--orange);margin-top:8px}
+}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">
+    <div class="mark">R</div>
+    <h1>Drink Ripples</h1>
+    <p>ניתוח שוק אמזון בריטניה</p>
+    <input id="u" placeholder="שם משתמש" autocomplete="off">
+    <input id="p" type="password" placeholder="סיסמה" autocomplete="off">
+    <button onclick="go()">כניסה</button>
+    <div class="err" id="e"></div>
+  </div>
+</div>
+
+<div id="doc">
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kick">Drink Ripples &middot; Amazon UK &middot; ספטמבר 2026</div>
+    <h1>שוק מדפסות המשקאות<br>באמזון בריטניה</h1>
+    <p class="lede">המדף שעליו נמכרות מכונות קפה בבריטניה מגלגל <b>£2.21 מיליון בחודש</b>. בתוכו יושבת קטגוריה אחת שלמה שבה יש <b>מתחרה יחיד</b>, בלי ביקורת אחת, בקטגוריה שגויה, שמפרסם על מילת מפתח אחת. זו הזדמנות פתוחה.</p>
+    <div class="stats">
+      <div class="stat"><div class="v">£2.21M</div><div class="l">גודל המדף לחודש<br>15 מוצרים מובילים</div></div>
+      <div class="stat"><div class="v">10,854</div><div class="l">יחידות לחודש<br>באותם 15 מוצרים</div></div>
+      <div class="stat"><div class="v">1</div><div class="l">מתחרה בקטגוריה<br>מדפסות משקאות</div></div>
+      <div class="stat"><div class="v">17,552</div><div class="l">חיפושים לחודש<br>בקהל הסטאוט לבדו</div></div>
+    </div>
+  </div>
+</div>
+
+<section>
+<div class="wrap">
+  <div class="snum">01</div>
+  <h2>המדף — מה באמת נמכר בבריטניה</h2>
+  <p class="big">בריטניה קונה מכונות משקה יקרות, ובכמויות. זו נקודת הפתיחה החשובה ביותר: אין כאן תקרת מחיר נמוכה.</p>
+  <div class="tw"><table>
+    <thead><tr><th>מוצר</th><th>מחיר</th><th>יחידות לחודש</th><th>הכנסה לחודש</th></tr></thead>
+    <tbody>
+      <tr><td>Philips L&rsquo;OR Barista Latte</td><td class="n">£174.99</td><td class="n up">2,533</td><td class="n">£443,250</td></tr>
+      <tr><td>Nescaf&eacute; Dolce Gusto Piccolo XS</td><td class="n">£35</td><td class="n up">1,312</td><td class="n">£45,920</td></tr>
+      <tr><td>De&rsquo;Longhi Magnifica Evo</td><td class="n">£527.99</td><td class="n up">886</td><td class="n">£467,799</td></tr>
+      <tr><td>Ninja Luxe Premier 3-in-1</td><td class="n">£479</td><td class="n up">684</td><td class="n">£327,636</td></tr>
+      <tr><td>Philips 5400 Bean-to-Cup</td><td class="n">£621.83</td><td class="n up">625</td><td class="n">£249,375</td></tr>
+      <tr><td>Nespresso Pixie</td><td class="n">£149.99</td><td class="n up">524</td><td class="n">£78,595</td></tr>
+      <tr><td>Sage Barista Express Impress</td><td class="n">£714.99</td><td class="n up">352</td><td class="n">£251,676</td></tr>
+      <tr><td>Breville Barista Max</td><td class="n">£394.99</td><td class="n">129</td><td class="n">£50,954</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>Sage מוכרת 352 מכונות בחודש במחיר £714.99. De&rsquo;Longhi מוכרת 886 ב-£527.99.</b> הקונה הבריטי משלם מאות לירות על מכונת משקה כשהוא מבין מה הוא מקבל. זה המדף, ואלה השכנים.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="snum">02</div>
+  <h2>המתחרה — EVEBOT</h2>
+  <p class="big">בכל קטגוריית מדפסות המשקאות באמזון בריטניה יש שחקן אחד. זהו.</p>
+  <div class="grid">
+    <div class="card"><div class="h"><span class="dot"></span>מי הוא</div><p>EVEBOT, יצרנית סינית. הדגם המוביל שלו הוא <span class="lat">EB-FC1</span> במחיר <span class="lat">£1,499.99</span>, נמכר ב-FBA.</p></div>
+    <div class="card"><div class="h"><span class="dot"></span>כמה הוא מוכר</div><p>ארבע יחידות בחודש, כ-<span class="lat">£6,000</span>. זו כל הקטגוריה, לא נתח ממנה.</p></div>
+    <div class="card"><div class="h"><span class="dot"></span>מה עומד מאחוריו</div><p>אפס ביקורות. אין דירוג כוכבים. הליסטינג בן כחצי שנה.</p></div>
+    <div class="card"><div class="h"><span class="dot"></span>איפה הוא יושב</div><p>בקטגוריה <span class="lat">Grocery &rsaquo; Baking Supplies &rsaquo; Icing &amp; Decorations &rsaquo; Edible Printer Ink &amp; Paper</span> — מדף של דיו אכיל לקישוט עוגות.</p></div>
+    <div class="card"><div class="h"><span class="dot"></span>כמה הוא נראה</div><p>מדורג בעמוד הראשון על <span class="lat">3</span> מילות מפתח מתוך <span class="lat">373</span> רלוונטיות.</p></div>
+    <div class="card"><div class="h"><span class="dot"></span>כמה הוא משקיע</div><p>מפרסם על <b>מילת מפתח אחת</b>.</p></div>
+  </div>
+  <p>גם הכותרת שלו לא מחליטה למי הוא פונה: <span class="lat">Coffee Latte Art Machine</span> בהתחלה, <span class="lat">DIY Cake Personalized Decoration</span> באמצע, ו-<span class="lat">for Cafes Museums</span> בסוף. שלושה קהלים שונים במשפט אחד.</p>
+  <div class="quote"><p>מי שמחזיק את הקטגוריה מחזיק אותה עם ליסטינג חדש, בלי ביקורות, על מדף של חומרי אפייה, עם מילת מפתח אחת בפרסום. <b>הדלת פתוחה לרווחה.</b></p></div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="snum">03</div>
+  <h2>המספרים — רצפה, בלי תקרה</h2>
+  <p class="big">כל המספרים כאן הם מינימום מוכח. הם לא תחזית ולא יעד — הם מה שכבר קורה בשוק היום, עם פחות ממה שיהיה לנו.</p>
+
+  <div class="ladder">
+    <div class="rung base">
+      <div class="fl"><div class="n">4</div><div class="u">מכונות בחודש</div></div>
+      <div class="tx"><div class="t">הרצפה המוכחת</div><div class="d">זה מה שמוכר היום מתחרה יחיד ב-<span class="lat">£1,499.99</span> עם אפס ביקורות, בקטגוריה שגויה, עם מילת מפתח אחת בפרסום. כל ליסטינג שעושה את הבסיס כמו שצריך מתחיל מכאן.</div></div>
+    </div>
+    <div class="rung">
+      <div class="fl"><div class="n">373</div><div class="u">מילות מפתח</div></div>
+      <div class="tx"><div class="t">הקטגוריה עצמה</div><div class="d">373 מילות מפתח רלוונטיות בניש. המתחרה נמצא בעמוד הראשון על שלוש מהן. השאר פנויות.</div></div>
+    </div>
+    <div class="rung">
+      <div class="fl"><div class="n">17,552</div><div class="u">חיפושים בחודש</div></div>
+      <div class="tx"><div class="t">קהל הסטאוט והפאב</div><div class="d">הקהל שמחפש <span class="lat">guinness</span> ו-<span class="lat">nitrosurge</span> באמזון בריטניה. אף מדפסת משקאות לא מדברת אליו היום. הוא לא יודע שאפשר להדפיס על הקצף.</div></div>
+    </div>
+    <div class="rung">
+      <div class="fl"><div class="n">9,196</div><div class="u">חיפושים בחודש</div></div>
+      <div class="tx"><div class="t">קהל המתנות</div><div class="d"><span class="lat">guinness gifts for men</span> ווריאציות. שוק מתנות בריטי קלאסי, עם שיא עונתי בחג המולד, יום האב ויום פטריק הקדוש.</div></div>
+    </div>
+    <div class="rung">
+      <div class="fl"><div class="n">&#43;</div><div class="u">ללא תקרה</div></div>
+      <div class="tx"><div class="t">בר ביתי, קוקטיילים וקינוחים</div><div class="d">קהלים נוספים שכבר פעילים במדף — אביזרי בר ביתי, ציוד קוקטיילים, הדפסה על מקרונים וקינוחים. כל אחד מהם מוסיף לרצפה ואף אחד מהם לא מוגבל בתקרה.</div></div>
+    </div>
+  </div>
+
+  <p>הצורה הנכונה לקרוא את הסולם: <b>ארבע מכונות בחודש זו נקודת הפתיחה, לא היעד.</b> היא מייצגת את גודל הקהל שכבר יודע שהמוצר קיים ומחפש אותו בשמו. כל שכבה מעליה היא קהל שנמצא באמזון בריטניה עם כסף ביד, ושאף אחד עדיין לא פנה אליו.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="snum">04</div>
+  <h2>מוצרי הקפה בבריטניה — והשפה שהם מדברים</h2>
+  <p>המדף הבריטי של מכונות המשקה מדבר בשפה עקבית מאוד. כל המותגים המובילים כותבים לפי אותו דקדוק:</p>
+  <div class="tw"><table>
+    <thead><tr><th>רכיב</th><th>דוגמאות מהמדף</th></tr></thead>
+    <tbody>
+      <tr><td>מותג ראשון</td><td class="lat">PHILIPS &middot; De&rsquo;Longhi &middot; Sage &middot; Ninja &middot; Breville</td></tr>
+      <tr><td>שם הדגם</td><td class="lat">L&rsquo;OR Barista Latte &middot; Magnifica Evo &middot; Barista Express Impress &middot; Luxe Premier</td></tr>
+      <tr><td>שם הקטגוריה במפורש</td><td class="lat">Pod Coffee Machine &middot; Bean to Cup Coffee Machine &middot; Coffee Capsule Machine</td></tr>
+      <tr><td>מפרט במספרים</td><td class="lat">15 Bar Pressure &middot; 19 Bar Italian Pump &middot; 1450 watts &middot; 1.8L water container &middot; 12 Drinks OneTouch</td></tr>
+      <tr><td>יכולת מוחשית</td><td class="lat">with Milk Frother &middot; Automatic Milk Frother &middot; Hot and Cold Beverages &middot; 3-in-1</td></tr>
+      <tr><td>גימור וצבע בסוף</td><td class="lat">Black &middot; Silver &middot; Brushed Stainless Steel</td></tr>
+      <tr><td>קוד דגם</td><td class="lat">ECAM292.81.B &middot; ES601UK &middot; EDG210.A &middot; VCF107</td></tr>
+    </tbody>
+  </table></div>
+  <p class="big">הדקדוק הוא: <b>מותג, דגם, שם הקטגוריה, מפרט מספרי, גימור.</b> בלי שיווקיות, בלי סופרלטיבים, בלי הבטחות. הקונה הבריטי מצפה לעובדות בשורה הראשונה.</p>
+
+  <h3>איך זה נראה כשמיישמים על מדפסת משקאות</h3>
+  <p>אותו דקדוק בדיוק, עם שמות העצם הנכונים — <span class="lat">Beverage Printer</span> במקום <span class="lat">Coffee Machine</span>, ומפרט שמישהו יכול לאמת:</p>
+  <div class="tw"><table>
+    <thead><tr><th>רכיב</th><th>מה נכנס</th></tr></thead>
+    <tbody>
+      <tr><td>מותג ודגם</td><td class="lat">Ripples &mdash; The Original Maker PRO</td></tr>
+      <tr><td>שם הקטגוריה</td><td class="lat">Beverage-Top Printer for Stout, Beer, Cocktails &amp; Coffee</td></tr>
+      <tr><td>מפרט מספרי</td><td class="lat">Prints in 10 Seconds &middot; Dual Pod Holders &middot; S / M / L Cup Sizes</td></tr>
+      <tr><td>יכולת מוחשית</td><td class="lat">Photos, Logos &amp; Text &middot; Edible Plant-Based Ink &middot; Auto Cup Detection</td></tr>
+      <tr><td>גימור</td><td class="lat">Black</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>ומה משתנה לפי קהל</h3>
+  <p>המכונה אחת. השפה משתנה לפי מי שקורא:</p>
+  <div class="tw"><table>
+    <thead><tr><th>קהל</th><th>שפה טכנית</th><th>השפה שמדברת אליו</th></tr></thead>
+    <tbody>
+      <tr><td>סטאוט ופאב</td><td class="lat was">Beverage-Top Printer</td><td class="lat now">Print on the head of a stout</td></tr>
+      <tr><td>מתנות</td><td class="lat was">Selfie &amp; Personalized Designs</td><td class="lat now">The gift for the man who has everything</td></tr>
+      <tr><td>בר ביתי</td><td class="lat was">Latte Art Printer</td><td class="lat now">Turn your home bar into the local</td></tr>
+      <tr><td>קינוחים</td><td class="lat was">Plant-Based Ingredients Only</td><td class="lat now">Print on macarons in 10 seconds</td></tr>
+      <tr><td>ברים ומלונות</td><td class="lat was">Social Media Boost</td><td class="lat now">Built for the pass</td></tr>
+    </tbody>
+  </table></div>
+  <p>שים לב שהעמודה הימנית היא שפת מפרט, והשמאלית היא שפת אירוע. במדף הבריטי שתיהן נחוצות: <b>המפרט בכותרת, האירוע בתמונות וב-A+.</b></p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="snum">05</div>
+  <h2>המלצת עיצוב</h2>
+  <p class="big">המדף הבריטי הוא מדף נקי. מכונות משקה מצולמות גדול, חד, על רקע לבן, עם מעט מאוד טקסט. זה הרף הוויזואלי שצריך לעמוד בו.</p>
+
+  <h3>התמונה הראשית</h3>
+  <ul class="li">
+    <li>רקע לבן מלא, המוצר ממלא כ-<span class="lat">85%</span> מהמסגרת, בלי טקסט ובלי תגיות — כמו כל שכן על המדף.</li>
+    <li>המכונה בזווית שלושת-רבעי, ולידה <b>פיינט סטאוט עם ראש קרם ועיצוב מודפס עליו</b>. זה הפריט שמבדיל אתכם משמונה מכונות קפה, והוא חייב להיות בתמונה הראשונה.</li>
+    <li>הקפסולה בפריים — היא מסבירה בלי מילים שיש כאן מערכת, לא רק מכשיר.</li>
+  </ul>
+
+  <h3>רצף הגלריה</h3>
+  <div class="grid">
+    <div class="card"><div class="h">1 &middot; מה זה עושה</div><p>כוס אחת, עיצוב מודפס חד, רקע כהה. שורה אחת: מה נכנס לכוס.</p></div>
+    <div class="card"><div class="h">2 &middot; בר אמיתי</div><p>דלפק בר בתאורה חמה, ידיים של ברמן, פיינט מוגש. סביבת עבודה, לא סט מצולם.</p></div>
+    <div class="card"><div class="h">3 &middot; מה מקבלים</div><p>פריסה מסודרת: מכונה, קפסולה, מתאם, כרטיס התחלה. וכוס תקנית לצדה כדי להבין גודל.</p></div>
+    <div class="card"><div class="h">4 &middot; שלושה צעדים</div><p>למזוג, לבחור, להדפיס. שלושה פאנלים, משפט אחד לכל אחד.</p></div>
+    <div class="card"><div class="h">5 &middot; כל התפריט</div><p>סטאוט, קוקטייל, אייס לאטה, מילקשייק, קפה, מקרונים. הקשת המלאה בפריים אחד.</p></div>
+    <div class="card"><div class="h">6 &middot; להפעיל כל יום</div><p>קפסולות, ניקיון, ספריית העיצובים. שלוש תשובות לשאלות שמגיעות לפני הקנייה.</p></div>
+  </div>
+
+  <h3>פלטה וטיפוגרפיה</h3>
+  <div class="spec">
+    <dt>רקע</dt><dd>פחם כהה <span class="lat">#1E1C1E</span> עם מרקם שיש עדין. לא שחור שטוח.</dd>
+    <dt>כותרות</dt><dd>קרם חם <span class="lat">#EFE6DC</span>, סאנס גאומטרי כבד, אותיות גדולות.</dd>
+    <dt>הדגשה</dt><dd>כתום <span class="lat">#DD7526</span> — פסים דקים ואייקונים בלבד, לעולם לא כשטח גדול.</dd>
+    <dt>כרטיסים</dt><dd>אוף-ווייט <span class="lat">#F5F0EA</span> עם טקסט כהה ופינות מעוגלות.</dd>
+    <dt>תאורה</dt><dd>אור חם משמאל למעלה, נפילה רכה. המשקאות זוהרים, הרקע נשאר כהה.</dd>
+  </div>
+
+  <h3>שלושה כללים שעושים את ההבדל</h3>
+  <ul class="li">
+    <li><b>רעיון אחד לתמונה.</b> כותרת אחת, עד שלוש שורות תומכות. תמונה עמוסה נעלמת ב-thumbnail של 500 פיקסל.</li>
+    <li><b>המשכיות.</b> אותו דלפק, אותה תאורה, אותו שוליים לאורך כל הרצף. הגלריה צריכה להיקרא כסיפור אחד ולא כאוסף פאנלים.</li>
+    <li><b>לצלם את העבודה, לא את המוצר.</b> מכונה על רקע לבן היא מפרט. פיינט מוגש על דלפק היא סיבה לקנות.</li>
+  </ul>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+  <div class="snum">06</div>
+  <h2>סיכום</h2>
+  <div class="quote"><p>מדף של <b>£2.21 מיליון בחודש</b>, שבתוכו קטגוריה שלמה מוחזקת על ידי <b>שחקן יחיד בלי ביקורת אחת</b>, על מדף שגוי, עם מילת מפתח אחת בפרסום. הרצפה היא <b>ארבע מכונות בחודש</b>, והיא נמדדה על ליסטינג חלש בהרבה ממה שאפשר לבנות כאן.</p></div>
+  <p>מעל הרצפה יושבים קהלים שכבר קונים באמזון בריטניה ושאיש לא פנה אליהם: <b>17,552</b> חיפושים בחודש בקהל הסטאוט, <b>9,196</b> בקהל המתנות, ועוד בר ביתי, קוקטיילים וקינוחים. הם לא מחפשים מדפסת כי הם לא יודעים שהיא קיימת.</p>
+  <p class="big">השוק קיים, המחיר מקובל על הקונה הבריטי, והעמדה פנויה. מה שנדרש הוא ליסטינג שמדבר בדקדוק של המדף, ותמונות שמראות פיינט — לא מפרט.</p>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+  <b>Drink Ripples &middot; ניתוח שוק אמזון בריטניה &middot; ספטמבר 2026</b><br>
+  בוצע על ידי צוות איזי-קומרס. מקורות: Amazon Brand Analytics, מחקר ניש Data Dive על amazon.co.uk, וקטלוג המדף החי.<br>
+  המסמך מיועד לשימוש פנימי של Drink Ripples.
+</div>
+</footer>
+
+</div>
+
+<script>
+function go(){
+  var u=document.getElementById('u').value.trim().toLowerCase();
+  var p=document.getElementById('p').value;
+  if(u==='ripples'&&p==='Ripples2026'){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('doc').style.display='block';
+    try{sessionStorage.setItem('dr_uk','1')}catch(e){}
+  }else{
+    document.getElementById('e').textContent='שם משתמש או סיסמה שגויים';
+  }
+}
+document.getElementById('p').addEventListener('keydown',function(e){if(e.key==='Enter')go()});
+document.getElementById('u').addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('p').focus()});
+try{if(sessionStorage.getItem('dr_uk')==='1'){
+  document.getElementById('gate').style.display='none';
+  document.getElementById('doc').style.display='block';
+}}catch(e){}
+</script>
+</body></html>
